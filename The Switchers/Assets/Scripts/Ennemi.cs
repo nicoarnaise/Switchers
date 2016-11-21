@@ -7,6 +7,10 @@ public class Ennemi : MonoBehaviour {
 	public Plateforme support;
 	public Vector2 destination1;
 	public Vector2 destination2;
+	public bool isMoving;
+	public int moveSpeed;
+
+	public Vector2 nextDestination;
 
 
 	// Use this for initialization
@@ -18,8 +22,17 @@ public class Ennemi : MonoBehaviour {
 	void Update () {
 
 		if (isMoving) {
-			MakeMove ();
+			makeMove ();
 		}
 	
+	}
+
+	public void makeMove(){
+		transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
+		if (transform.position == destination1) {
+			nextDestination = destination2;
+		} else {
+			nextDestination = destination1;
+		}
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Plateforme : MonoBehaviour {
 
-	public Actionner actionner;
+	public Actionneur actionneur;
 	public int pointeurDest;
 	public int moveSpeed;
 	public int statut;
@@ -27,7 +27,7 @@ public class Plateforme : MonoBehaviour {
 	}
 
 	public void makeMove(){
-		transform.position = Vector2.MoveTowards (transform.position, nextDesination, Time.deltaTime * moveSpeed);
+		transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
 		if (pointeurDest == tabDestination.Length) {
 			pointeurDest = 0;
 		} else {
