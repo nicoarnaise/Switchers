@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Cadavre : MonoBehaviour {
 
-	public Vector2 position;
 	public bool statut;
 
 	// Use this for initialization

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Ennemi : MonoBehaviour {
 
-	public Vector2 position;
 	public Plateforme support;
 	public Vector2 destination1;
 	public Vector2 destination2;

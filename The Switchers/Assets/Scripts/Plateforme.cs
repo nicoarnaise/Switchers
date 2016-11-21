@@ -8,7 +8,6 @@ public class Plateforme : MonoBehaviour {
 	public int moveSpeed;
 	public int statut;
 	public Vector2[] tabDestination;
-	public Vector2 position;
 	public bool isMoving;
 	public Vector2 nextDestination;
 

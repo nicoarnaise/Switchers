@@ -5,7 +5,6 @@ public class Actionneur : MonoBehaviour {
 
 
 	public bool isActive;
-	public Vector2 position;
 	public Plateforme support;
 
 
