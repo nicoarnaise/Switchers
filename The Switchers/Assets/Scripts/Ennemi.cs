@@ -29,7 +29,7 @@ public class Ennemi : MonoBehaviour {
 
 	public void makeMove(){
 		transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
-		if (transform.position == destination1) {
+		if ((Vector2) transform.position == destination1) {
 			nextDestination = destination2;
 		} else {
 			nextDestination = destination1;
