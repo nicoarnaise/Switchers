@@ -5,7 +5,6 @@ public class Actionneur : MonoBehaviour {
 
 
 	public bool isActive;
-	public Plateforme support;
 
 	Animator anim;
 
@@ -31,11 +30,18 @@ public class Actionneur : MonoBehaviour {
 			isActive = true;
 
 		}
-
-		Debug.Log (isActive);
 		anim.SetBool("Activated", isActive);
 
 
+	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+		Debug.Log ("coucou");
+		if (collider.gameObject.CompareTag ("Player") && gameObject.CompareTag ("Plaque")) {
+			//Debug.Log ("coucou");
+			isActive = true;
+			anim.SetBool ("Activated", isActive);
+		}
 	}
 
 

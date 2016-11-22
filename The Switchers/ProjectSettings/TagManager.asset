@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Plateforme
-  - Actionneur
+  - Levier
+  - Player
+  - Plaque
   layers:
   - Default
   - TransparentFX
