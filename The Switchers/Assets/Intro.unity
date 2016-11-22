@@ -99,11 +99,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011948213910, guid: 8ae5d7ff5cf092b4fa6c7b7233e8518e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.55
+      value: 2.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000011948213910, guid: 8ae5d7ff5cf092b4fa6c7b7233e8518e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 4000011948213910, guid: 8ae5d7ff5cf092b4fa6c7b7233e8518e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -147,6 +147,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012972229698, guid: 8ae5d7ff5cf092b4fa6c7b7233e8518e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ae5d7ff5cf092b4fa6c7b7233e8518e, type: 2}
   m_IsPrefabParent: 0
@@ -176,12 +180,12 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180624188}
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -383,6 +387,10 @@ MonoBehaviour:
   flyInertia: 0.9
   jumpSpeed: 400
   hasJumped: 0
+  isActivating: 0
+  isTimerOn: 0
+  period: 0
+  timer: 0
   groundChecker: {fileID: 1472953777}
 --- !u!4 &1260292152
 Transform:
@@ -413,7 +421,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &1260292154
@@ -458,9 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74042e808fcd64068b07c70f16f15d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!61 &1472953778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -581,9 +586,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionneur: {fileID: 180624191}
-  pointeurDest: 0
-  moveSpeed: 0
+  pointeurDest: 1
+  moveSpeed: 2
   statut: 0
-  tabDestination: []
+  tabDestination:
+  - {x: -0.4, y: -2.7}
+  - {x: 2, y: 2}
   isMoving: 0
-  nextDestination: {x: 0, y: 0}
+  nextDestination: {x: 2, y: 2}
