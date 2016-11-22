@@ -11,23 +11,40 @@ public class PlayerController : MonoBehaviour {
 	public int jumpSpeed;
 	public bool hasJumped;
 
+	public bool isActivating;
+	public bool isTimerOn;
+	public float period;
+	public float timer;
+
 	public GroundChecker groundChecker;
 
 	private Rigidbody2D rb;
-	/*private BoxCollider2D collider;
-	private BoxCollider2D other;*/
 
 	// Use this for initialization
 	void Start () {
+		isTimerOn = false;
+		isActivating = false;
 		hasJumped = false;
-		/*collider = GetComponent<BoxCollider2D> ();
-		other = GameObject.FindGameObjectWithTag ("Plateforme").GetComponent<BoxCollider2D>();*/
+		period = 0.1f;
 		rb = GetComponent<Rigidbody2D>();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+
+		// setTimerOn to allow player to switch actionner only once every period Time
+		if (isActivating) {
+			timer = Time.time;
+			isActivating = false;
+			isTimerOn = true;
+		}
+
+		// Allows to have a period elapsed function
+		if (isTimerOn && Time.time > timer + period) {
+			isTimerOn = false;
+		}
 
 
 		if (!hasJumped && isGrounded && Input.GetButtonDown("Jump")) {
@@ -37,7 +54,8 @@ public class PlayerController : MonoBehaviour {
 			
 			}
 
-		}
+
+	}
 
 	void FixedUpdate(){
 
@@ -60,15 +78,22 @@ public class PlayerController : MonoBehaviour {
 		}
 		rb.velocity = velocity;
 		
-			
-			/*if (collider.IsTouching(other)) {
-				isSaut = false;
-				StartCoroutine (WaitAFrame ());	
-			}*/
 
 	}
 
-	/*IEnumerator WaitAFrame(){
-		yield return new WaitForSeconds(0.001f);
-	}*/
+	void OnTriggerStay2D(Collider2D other){
+
+		// Actionneur
+		if (Input.GetKeyDown(KeyCode.DownArrow) && !isActivating && !isTimerOn){
+
+			if (other.gameObject.CompareTag ("Actionneur")) {
+				Actionneur actionneur = other.gameObject.GetComponent<Actionneur>();
+				actionneur.activate();
+				isActivating = true;
+			}
+		}
+
+
+	}
+
 }
