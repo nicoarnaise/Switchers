@@ -35,11 +35,19 @@ public class Actionneur : MonoBehaviour {
 
 	}
 
+	// Plaque Enter
 	void OnTriggerEnter2D(Collider2D collider){
-		Debug.Log ("coucou");
+		
 		if (collider.gameObject.CompareTag ("Player") && gameObject.CompareTag ("Plaque")) {
-			//Debug.Log ("coucou");
 			isActive = true;
+			anim.SetBool ("Activated", isActive);
+		}
+	}
+
+	// Plaque Exit
+	void OnTriggerExit2D(Collider2D collider){
+		if (collider.gameObject.CompareTag ("Player") && gameObject.CompareTag ("Plaque")) {
+			isActive = false;
 			anim.SetBool ("Activated", isActive);
 		}
 	}

@@ -530,7 +530,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 4c1fa4a8-a5de-422b-bedf-416fb107606f
-  projectName: The Switchers
-  organizationId: chiisaishirokuma
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
