@@ -3,8 +3,13 @@ using System.Collections;
 
 public class Level : MonoBehaviour {
 
-	public PlayerController playerController;
 	public int nbCadavre;
+	public Plateforme[] plateformes; 
+	public Ennemi[] ennemis; 
+	public Actionneur[] actionneurs;
+	public Cadavre[] cadavres; 
+	public GameObject[] murs; 
+
 
 	// Use this for initialization
 	void Start () {

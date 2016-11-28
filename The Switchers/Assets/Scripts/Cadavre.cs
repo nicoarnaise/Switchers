@@ -3,10 +3,11 @@ using System.Collections;
 
 public class Cadavre : MonoBehaviour {
 
-	public bool statut;
+	Animator anim;
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 	
 	}
 	

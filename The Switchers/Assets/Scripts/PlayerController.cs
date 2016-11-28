@@ -4,6 +4,9 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
+	public Level level;
+	public bool isSpirit;
+
 	public bool isPhysic;
 	public bool isGrounded;
 	public int moveSpeed;
@@ -47,11 +50,40 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if (isGrounded && Input.GetButtonDown("Jump")) {
-			
+		if (isGrounded && Input.GetButtonDown("Jump")) {	
 			rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
-
 			}
+
+		if (Input.GetButtonDown ("Switch")) {
+			isSpirit = !isSpirit;
+			int lengthActionneurs = level.actionneurs.Length;
+			int lengthEnnemis = level.ennemis.Length;
+			int lengthCadavres = level.cadavres.Length;
+			int lengthPlateformes = level.plateformes.Length;
+			int lengthMurs = level.murs.Length;
+
+
+			for (int i = 0; i < lengthActionneurs; i++) {
+				Animator anim = ((Actionneur)level.actionneurs[i]).GetComponent<Animator>();
+				anim.SetBool("isSpirit", isSpirit);
+			}
+			for (int i = 0; i < lengthEnnemis; i++) {
+				Animator anim = ((Ennemi)level.ennemis[i]).GetComponent<Animator>();
+				anim.SetBool("isSpirit", isSpirit);
+			}
+			for (int i = 0; i < lengthCadavres; i++) {
+				Animator anim = ((Cadavre)level.cadavres[i]).GetComponent<Animator>();
+				anim.SetBool("isSpirit", isSpirit);
+			}
+			for (int i = 0; i < lengthPlateformes; i++) {
+				Animator anim = ((Plateforme)level.plateformes[i]).GetComponent<Animator>();
+				anim.SetBool("isSpirit", isSpirit);
+			}
+			/*for (int i = 0; i < lengthMurs; i++) {
+				Animator anim = ((Mur)level.murs[i]).GetComponent<Animator>();
+				anim.SetBool("isSpirit", isSpirit);
+			}*/
+		}
 
 
 	}
