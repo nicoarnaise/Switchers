@@ -9,6 +9,8 @@ public class Ennemi : MonoBehaviour {
 	public bool isMoving;
 	public int moveSpeed;
 
+	bool facingRight = true;
+
 	public Vector2 nextDestination;
 
 
@@ -26,12 +28,23 @@ public class Ennemi : MonoBehaviour {
 	
 	}
 
+
 	public void makeMove(){
 		transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
-		if ((Vector2) transform.position == destination1) {
-			nextDestination = destination2;
-		} else {
-			nextDestination = destination1;
-		}
+		if ((Vector2) transform.position == nextDestination) {
+			if (nextDestination == destination1) {
+				nextDestination = destination2;
+			} else {
+				nextDestination = destination1;
+			}
+			Flip ();
+		} 
+	}
+
+	void Flip(){
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }

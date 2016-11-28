@@ -47,11 +47,10 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if (!hasJumped && isGrounded && Input.GetButtonDown("Jump")) {
+		if (isGrounded && Input.GetButtonDown("Jump")) {
 			
-				rb.AddForce(new Vector2(0f,jumpSpeed));
-				hasJumped = true;
-			
+			rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
+
 			}
 
 
@@ -62,9 +61,6 @@ public class PlayerController : MonoBehaviour {
 		// Jump
 
 		isGrounded = groundChecker.isTriggered;
-		if (!isGrounded) {
-			hasJumped = false;
-		}
 
 		// Movement
 
