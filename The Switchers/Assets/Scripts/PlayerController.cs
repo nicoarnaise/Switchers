@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Level level;
 
-	public bool isSpirit;
+	public static bool isSpirit;
 
 	public bool isPhysic;
 	public bool isGrounded;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	public float timer;
 
 	public GroundChecker groundChecker;
+	public GameObject checkpoint;
 
 	private Rigidbody2D rb;
 
@@ -104,7 +105,8 @@ public class PlayerController : MonoBehaviour {
 
 			for (int i = 0; i < lengthActionneurs; i++) {
 				Actionneur actionneur = (Actionneur)level.actionneurs [i];
-				actionneur.gameObject.SetActive (actionneur.isSpirit == isSpirit);
+				actionneur.isSpirit = isSpirit;
+				actionneur.gameObject.SetActive (actionneur.statut==0 || isSpirit && actionneur.statut==2 || !isSpirit && actionneur.statut==1);
 			}
 			for (int i = 0; i < lengthEnnemis; i++) {
 				Ennemi ennemi = (Ennemi)level.ennemis [i];
@@ -121,8 +123,8 @@ public class PlayerController : MonoBehaviour {
 				if (plateforme.isSpirit != isSpirit){
 					for (int j = 0; j < plateforme.transform.childCount; j++) {
 						Transform objet = plateforme.transform.GetChild (j);
-						Debug.Log (objet.name);
 						if (objet.name == "Player") {
+							groundChecker.getTriggers().Clear();
 							objet.transform.parent = null;
 						}
 					}
@@ -171,6 +173,14 @@ public class PlayerController : MonoBehaviour {
 				isActivating = true;
 			}
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+
+		if (collider.gameObject.CompareTag ("Ennemi")) {
+			transform.position = checkpoint.transform.position;
+		}
+
 	}
 
 

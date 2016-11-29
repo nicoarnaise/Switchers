@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Mur : MonoBehaviour {
 
+	public int statut;
 	public bool isSpirit;
 	Animator anim;
 	// Use this for initialization

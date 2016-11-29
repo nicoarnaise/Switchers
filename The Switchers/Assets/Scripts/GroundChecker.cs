@@ -16,6 +16,10 @@ public class GroundChecker : MonoBehaviour {
 	
 	}
 
+	public HashSet<Collider2D> getTriggers(){
+		return triggers;
+	}
+
 	public bool isTriggered{
 		get { return triggers.Count > 0; }
 	}

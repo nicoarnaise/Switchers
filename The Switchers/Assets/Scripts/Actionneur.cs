@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Actionneur : MonoBehaviour {
 
+	public int statut;
 	public bool isSpirit;
 	public bool isActive;
 

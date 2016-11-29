@@ -8,6 +8,7 @@ public class Plateforme : MonoBehaviour {
 	public int moveSpeed;
 
 	public bool isSpirit;
+	public int statut;
 	Animator anim;
 	public Vector2[] tabDestination;
 	public bool isMoving;

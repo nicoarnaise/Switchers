@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Ennemi : MonoBehaviour {
 
+	public int statut;
 	public Plateforme support;
 	public Vector2 destination1;
 	public Vector2 destination2;
@@ -63,5 +64,6 @@ public class Ennemi : MonoBehaviour {
 		if (collider.gameObject.CompareTag ("Bords")) {
 			Flip ();
 		}
+			
 	}
 }

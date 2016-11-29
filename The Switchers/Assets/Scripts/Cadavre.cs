@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Cadavre : MonoBehaviour {
 
+	public int statut;
 	public bool isSpirit;
 	Animator anim;
 
