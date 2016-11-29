@@ -8,7 +8,7 @@ public class Level : MonoBehaviour {
 	public Ennemi[] ennemis; 
 	public Actionneur[] actionneurs;
 	public Cadavre[] cadavres; 
-	public GameObject[] murs; 
+	public Mur[] murs; 
 
 
 	// Use this for initialization

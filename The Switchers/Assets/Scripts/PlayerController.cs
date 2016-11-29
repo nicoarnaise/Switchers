@@ -5,6 +5,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public Level level;
+
 	public bool isSpirit;
 
 	public bool isPhysic;
@@ -30,8 +31,46 @@ public class PlayerController : MonoBehaviour {
 		hasJumped = false;
 		period = 0.1f;
 		rb = GetComponent<Rigidbody2D>();
-	
+
+		int lengthActionneurs = level.actionneurs.Length;
+		int lengthEnnemis = level.ennemis.Length;
+		int lengthCadavres = level.cadavres.Length;
+		int lengthPlateformes = level.plateformes.Length;
+		int lengthMurs = level.murs.Length;
+
+		for (int i = 0; i < lengthActionneurs; i++) {
+			Actionneur actionneur = (Actionneur)level.actionneurs [i];
+			actionneur.gameObject.SetActive (actionneur.isSpirit == isSpirit);
+		}
+		for (int i = 0; i < lengthEnnemis; i++) {
+			Ennemi ennemi = (Ennemi)level.ennemis [i];
+			ennemi.gameObject.SetActive (ennemi.isSpirit == isSpirit);
+		}
+		for (int i = 0; i < lengthCadavres; i++) {
+			Cadavre cadavre = (Cadavre)level.cadavres [i];
+			cadavre.gameObject.SetActive (cadavre.isSpirit == isSpirit);
+		}
+
+		for (int i = 0; i < lengthPlateformes; i++) {
+			Plateforme plateforme = (Plateforme)level.plateformes [i];
+
+			if (plateforme.isSpirit != isSpirit){
+					for (int j = 0; j < plateforme.transform.childCount - 1; j++) {
+						Transform objet = plateforme.transform.GetChild (j);
+					if (objet.transform.tag == "Player") {
+							objet.transform.parent.parent = null;
+						}
+					}
+				}
+
+			plateforme.gameObject.SetActive (plateforme.isSpirit == isSpirit);
+		}
+		for (int i = 0; i < lengthMurs; i++) {
+			Mur mur = (Mur)level.murs [i];
+			mur.gameObject.SetActive (mur.isSpirit == isSpirit);
+		}
 	}
+		
 	
 	// Update is called once per frame
 	void Update () {
@@ -64,25 +103,37 @@ public class PlayerController : MonoBehaviour {
 
 
 			for (int i = 0; i < lengthActionneurs; i++) {
-				Animator anim = ((Actionneur)level.actionneurs[i]).GetComponent<Animator>();
-				anim.SetBool("isSpirit", isSpirit);
+				Actionneur actionneur = (Actionneur)level.actionneurs [i];
+				actionneur.gameObject.SetActive (actionneur.isSpirit == isSpirit);
 			}
 			for (int i = 0; i < lengthEnnemis; i++) {
-				Animator anim = ((Ennemi)level.ennemis[i]).GetComponent<Animator>();
-				anim.SetBool("isSpirit", isSpirit);
+				Ennemi ennemi = (Ennemi)level.ennemis [i];
+				ennemi.gameObject.SetActive (ennemi.isSpirit == isSpirit);
 			}
 			for (int i = 0; i < lengthCadavres; i++) {
-				Animator anim = ((Cadavre)level.cadavres[i]).GetComponent<Animator>();
-				anim.SetBool("isSpirit", isSpirit);
+				Cadavre cadavre = (Cadavre)level.cadavres [i];
+				cadavre.gameObject.SetActive (cadavre.isSpirit == isSpirit);
 			}
+
 			for (int i = 0; i < lengthPlateformes; i++) {
-				Animator anim = ((Plateforme)level.plateformes[i]).GetComponent<Animator>();
-				anim.SetBool("isSpirit", isSpirit);
+				Plateforme plateforme = (Plateforme)level.plateformes [i];
+
+				if (plateforme.isSpirit != isSpirit){
+					for (int j = 0; j < plateforme.transform.childCount; j++) {
+						Transform objet = plateforme.transform.GetChild (j);
+						Debug.Log (objet.name);
+						if (objet.name == "Player") {
+							objet.transform.parent = null;
+						}
+					}
+				}
+
+				plateforme.gameObject.SetActive (plateforme.isSpirit == isSpirit);
 			}
-			/*for (int i = 0; i < lengthMurs; i++) {
-				Animator anim = ((Mur)level.murs[i]).GetComponent<Animator>();
-				anim.SetBool("isSpirit", isSpirit);
-			}*/
+			for (int i = 0; i < lengthMurs; i++) {
+				Mur mur = (Mur)level.murs [i];
+				mur.gameObject.SetActive (mur.isSpirit == isSpirit);
+			}
 		}
 
 

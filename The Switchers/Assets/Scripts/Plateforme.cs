@@ -6,6 +6,8 @@ public class Plateforme : MonoBehaviour {
 	public Actionneur actionneur;
 	public int pointeurDest;
 	public int moveSpeed;
+
+	public bool isSpirit;
 	Animator anim;
 	public Vector2[] tabDestination;
 	public bool isMoving;
@@ -24,6 +26,8 @@ public class Plateforme : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		anim.SetBool ("isSpirit", isSpirit);
+
 		if (actionneur.isActive && !isMoving) {
 			isMoving = true;
 		}
@@ -35,6 +39,7 @@ public class Plateforme : MonoBehaviour {
 		if (isMoving) {
 			makeMove ();
 		}
+
 	}
 
 	public void makeMove(){

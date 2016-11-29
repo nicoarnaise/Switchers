@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Actionneur : MonoBehaviour {
 
-
+	public bool isSpirit;
 	public bool isActive;
 
 	Animator anim;
@@ -16,7 +16,7 @@ public class Actionneur : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		anim.SetBool ("isSpirit", isSpirit);
 	//	transform.position = support.transform.position;
 	
 	}

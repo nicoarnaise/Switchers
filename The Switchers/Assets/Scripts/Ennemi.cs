@@ -6,6 +6,7 @@ public class Ennemi : MonoBehaviour {
 	public Plateforme support;
 	public Vector2 destination1;
 	public Vector2 destination2;
+	public bool isSpirit;
 	public bool isMoving;
 	public int moveSpeed;
 	Animator anim;
@@ -19,7 +20,7 @@ public class Ennemi : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
-	
+		anim.SetBool ("isSpirit", isSpirit);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +29,7 @@ public class Ennemi : MonoBehaviour {
 		if (isMoving) {
 			makeMove ();
 		}
+
 	
 	}
 
@@ -44,14 +46,6 @@ public class Ennemi : MonoBehaviour {
 		}
 		rb.velocity = velocity;
 
-		// transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
-		/*if ((Vector2) transform.position == nextDestination) {
-			if (nextDestination == destination1) {
-				nextDestination = destination2;
-			} else {
-				nextDestination = destination1;
-			}
-			*/
 
 
 	}
