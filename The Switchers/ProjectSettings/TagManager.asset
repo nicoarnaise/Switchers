@@ -9,6 +9,8 @@ TagManager:
   - Player
   - Plaque
   - Bords
+  - Actionneur
+  - Ennemi
   layers:
   - Default
   - TransparentFX
@@ -46,12 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 2603838513
+  - name: ground
+    uniqueID: 1520061563
     locked: 0
   - name: Actionneur
     uniqueID: 2053123021
     locked: 0
-  - name: ground
-    uniqueID: 1520061563
+  - name: Player
+    uniqueID: 2603838513
     locked: 0
