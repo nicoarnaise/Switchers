@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public Level level;
 
-	public static bool isSpirit;
+	public bool isSpirit;
 
 	public bool isPhysic;
 	public bool isGrounded;
@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 	public GroundChecker groundChecker;
 	public GameObject checkpoint;
 
+    private Animator animator;
+
 	private Rigidbody2D rb;
 
 	// Use this for initialization
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour {
 		hasJumped = false;
 		period = 0.1f;
 		rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
 		int lengthActionneurs = level.actionneurs.Length;
 		int lengthEnnemis = level.ennemis.Length;
@@ -39,38 +42,52 @@ public class PlayerController : MonoBehaviour {
 		int lengthPlateformes = level.plateformes.Length;
 		int lengthMurs = level.murs.Length;
 
-		for (int i = 0; i < lengthActionneurs; i++) {
-			Actionneur actionneur = (Actionneur)level.actionneurs [i];
-			actionneur.gameObject.SetActive (actionneur.isSpirit == isSpirit);
-		}
-		for (int i = 0; i < lengthEnnemis; i++) {
-			Ennemi ennemi = (Ennemi)level.ennemis [i];
-			ennemi.gameObject.SetActive (ennemi.isSpirit == isSpirit);
-		}
-		for (int i = 0; i < lengthCadavres; i++) {
-			Cadavre cadavre = (Cadavre)level.cadavres [i];
-			cadavre.gameObject.SetActive (cadavre.isSpirit == isSpirit);
-		}
+        animator.SetBool("isSpirit", isSpirit);
+        for (int i = 0; i < lengthActionneurs; i++)
+        {
+            Actionneur actionneur = (Actionneur)level.actionneurs[i];
+            actionneur.isSpirit = isSpirit;
+            actionneur.gameObject.SetActive(actionneur.statut == 0 || isSpirit && actionneur.statut == 2 || !isSpirit && actionneur.statut == 1);
+        }
+        for (int i = 0; i < lengthEnnemis; i++)
+        {
+            Ennemi ennemi = (Ennemi)level.ennemis[i];
+            ennemi.isSpirit = isSpirit;
+            ennemi.gameObject.SetActive(ennemi.statut == 0 || isSpirit && ennemi.statut == 2 || !isSpirit && ennemi.statut == 1);
+        }
+        for (int i = 0; i < lengthCadavres; i++)
+        {
+            Cadavre cadavre = (Cadavre)level.cadavres[i];
+            cadavre.isSpirit = isSpirit;
+            cadavre.gameObject.SetActive(cadavre.statut == 0 || isSpirit && cadavre.statut == 2 || !isSpirit && cadavre.statut == 1);
+        }
 
-		for (int i = 0; i < lengthPlateformes; i++) {
-			Plateforme plateforme = (Plateforme)level.plateformes [i];
+        for (int i = 0; i < lengthPlateformes; i++)
+        {
+            Plateforme plateforme = (Plateforme)level.plateformes[i];
+            plateforme.isSpirit = isSpirit;
+            if (!(plateforme.statut == 0 || isSpirit && plateforme.statut == 2 || !isSpirit && plateforme.statut == 1))
+            {
+                for (int j = 0; j < plateforme.transform.childCount; j++)
+                {
+                    Transform objet = plateforme.transform.GetChild(j);
+                    if (objet.name == "Player")
+                    {
+                        groundChecker.getTriggers().Clear();
+                        objet.transform.parent = null;
+                    }
+                }
+            }
 
-			if (plateforme.isSpirit != isSpirit){
-					for (int j = 0; j < plateforme.transform.childCount - 1; j++) {
-						Transform objet = plateforme.transform.GetChild (j);
-					if (objet.transform.tag == "Player") {
-							objet.transform.parent.parent = null;
-						}
-					}
-				}
-
-			plateforme.gameObject.SetActive (plateforme.isSpirit == isSpirit);
-		}
-		for (int i = 0; i < lengthMurs; i++) {
-			Mur mur = (Mur)level.murs [i];
-			mur.gameObject.SetActive (mur.isSpirit == isSpirit);
-		}
-	}
+            plateforme.gameObject.SetActive(plateforme.statut == 0 || isSpirit && plateforme.statut == 2 || !isSpirit && plateforme.statut == 1);
+        }
+        for (int i = 0; i < lengthMurs; i++)
+        {
+            Mur mur = (Mur)level.murs[i];
+            mur.isSpirit = isSpirit;
+            mur.gameObject.SetActive(mur.statut == 0 || isSpirit && mur.statut == 2 || !isSpirit && mur.statut == 1);
+        }
+    }
 		
 	
 	// Update is called once per frame
@@ -96,6 +113,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Switch")) {
 			isSpirit = !isSpirit;
+            animator.SetBool("isSpirit", isSpirit);
 			int lengthActionneurs = level.actionneurs.Length;
 			int lengthEnnemis = level.ennemis.Length;
 			int lengthCadavres = level.cadavres.Length;
@@ -103,40 +121,51 @@ public class PlayerController : MonoBehaviour {
 			int lengthMurs = level.murs.Length;
 
 
-			for (int i = 0; i < lengthActionneurs; i++) {
-				Actionneur actionneur = (Actionneur)level.actionneurs [i];
-				actionneur.isSpirit = isSpirit;
-				actionneur.gameObject.SetActive (actionneur.statut==0 || isSpirit && actionneur.statut==2 || !isSpirit && actionneur.statut==1);
-			}
-			for (int i = 0; i < lengthEnnemis; i++) {
-				Ennemi ennemi = (Ennemi)level.ennemis [i];
-				ennemi.gameObject.SetActive (ennemi.isSpirit == isSpirit);
-			}
-			for (int i = 0; i < lengthCadavres; i++) {
-				Cadavre cadavre = (Cadavre)level.cadavres [i];
-				cadavre.gameObject.SetActive (cadavre.isSpirit == isSpirit);
-			}
+            for (int i = 0; i < lengthActionneurs; i++)
+            {
+                Actionneur actionneur = (Actionneur)level.actionneurs[i];
+                actionneur.isSpirit = isSpirit;
+                actionneur.gameObject.SetActive(actionneur.statut == 0 || isSpirit && actionneur.statut == 2 || !isSpirit && actionneur.statut == 1);
+            }
+            for (int i = 0; i < lengthEnnemis; i++)
+            {
+                Ennemi ennemi = (Ennemi)level.ennemis[i];
+                ennemi.isSpirit = isSpirit;
+                ennemi.gameObject.SetActive(ennemi.statut == 0 || isSpirit && ennemi.statut == 2 || !isSpirit && ennemi.statut == 1);
+            }
+            for (int i = 0; i < lengthCadavres; i++)
+            {
+                Cadavre cadavre = (Cadavre)level.cadavres[i];
+                cadavre.isSpirit = isSpirit;
+                cadavre.gameObject.SetActive(cadavre.statut == 0 || isSpirit && cadavre.statut == 2 || !isSpirit && cadavre.statut == 1);
+            }
 
-			for (int i = 0; i < lengthPlateformes; i++) {
-				Plateforme plateforme = (Plateforme)level.plateformes [i];
+            for (int i = 0; i < lengthPlateformes; i++)
+            {
+                Plateforme plateforme = (Plateforme)level.plateformes[i];
+                plateforme.isSpirit = isSpirit;
+                if (!(plateforme.statut == 0 || isSpirit && plateforme.statut == 2 || !isSpirit && plateforme.statut == 1))
+                {
+                    for (int j = 0; j < plateforme.transform.childCount; j++)
+                    {
+                        Transform objet = plateforme.transform.GetChild(j);
+                        if (objet.name == "Player")
+                        {
+                            groundChecker.getTriggers().Clear();
+                            objet.transform.parent = null;
+                        }
+                    }
+                }
 
-				if (plateforme.isSpirit != isSpirit){
-					for (int j = 0; j < plateforme.transform.childCount; j++) {
-						Transform objet = plateforme.transform.GetChild (j);
-						if (objet.name == "Player") {
-							groundChecker.getTriggers().Clear();
-							objet.transform.parent = null;
-						}
-					}
-				}
-
-				plateforme.gameObject.SetActive (plateforme.isSpirit == isSpirit);
-			}
-			for (int i = 0; i < lengthMurs; i++) {
-				Mur mur = (Mur)level.murs [i];
-				mur.gameObject.SetActive (mur.isSpirit == isSpirit);
-			}
-		}
+                plateforme.gameObject.SetActive(plateforme.statut == 0 || isSpirit && plateforme.statut == 2 || !isSpirit && plateforme.statut == 1);
+            }
+            for (int i = 0; i < lengthMurs; i++)
+            {
+                Mur mur = (Mur)level.murs[i];
+                mur.isSpirit = isSpirit;
+                mur.gameObject.SetActive(mur.statut == 0 || isSpirit && mur.statut == 2 || !isSpirit && mur.statut == 1);
+            }
+        }
 
 
 	}
