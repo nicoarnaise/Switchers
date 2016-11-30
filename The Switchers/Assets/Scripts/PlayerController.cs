@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
 
 	private Rigidbody2D rb;
+	public bool facingRight;
 
 	// Use this for initialization
 	void Start () {
@@ -92,7 +93,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		//Movement direction control
+		Flip();
 
 		// setTimerOn to allow player to switch actionner only once every period Time
 		if (isActivating) {
@@ -108,6 +111,7 @@ public class PlayerController : MonoBehaviour {
 
 
 		if (isGrounded && Input.GetButtonDown("Jump")) {	
+			animator.SetBool ("isGround", false);
 			rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
 			}
 
@@ -175,6 +179,8 @@ public class PlayerController : MonoBehaviour {
 		// Jump
 
 		isGrounded = groundChecker.isTriggered;
+		animator.SetBool ("isGround", isGrounded);
+		animator.SetFloat ("vSpeed", rb.velocity.y);
 
 		// Movement
 
@@ -210,6 +216,15 @@ public class PlayerController : MonoBehaviour {
 			transform.position = checkpoint.transform.position;
 		}
 
+	}
+
+	void Flip(){
+		if ((facingRight && rb.velocity.x < 0) || (!facingRight && rb.velocity.x > 0)) {
+			Vector3 theScale = transform.localScale;
+			theScale.x *= -1;
+			transform.localScale = theScale;
+			facingRight = !facingRight;
+		}
 	}
 
 
