@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Mur.cs" />
     <Compile Include="Assets\Scripts\Plateforme.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\backgroundAdapter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

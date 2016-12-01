@@ -195,6 +195,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212000011450863988, guid: 0c72646ddb9d26941a21c4021a3465ba,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1691128783
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61000011793129250, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
@@ -312,6 +317,11 @@ Prefab:
     - target: {fileID: 4000010630463160, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
       propertyPath: m_LocalScale.x
       value: 2.4819555
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011450863988, guid: 0c72646ddb9d26941a21c4021a3465ba,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1691128783
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61000011793129250, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
@@ -966,6 +976,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 212000010258396100, guid: 166b46171c26f814bb04867ba32c342e,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 2053123021
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
   m_IsPrefabParent: 0
@@ -1115,6 +1130,11 @@ Prefab:
       propertyPath: m_TagString
       value: Cadavre
       objectReference: {fileID: 0}
+    - target: {fileID: 212000011573912844, guid: ab916e70b004d447080fb7eaf488ff51,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1254216781
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab916e70b004d447080fb7eaf488ff51, type: 2}
   m_IsPrefabParent: 0
@@ -1184,6 +1204,11 @@ Prefab:
     - target: {fileID: 1000010390403548, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
       propertyPath: m_Name
       value: Plateforme (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000011450863988, guid: 0c72646ddb9d26941a21c4021a3465ba,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1691128783
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61000011793129250, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}

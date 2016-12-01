@@ -29,6 +29,5 @@ public class CameraController : MonoBehaviour {
 				transform.position = new Vector3 ((float)finishLevelPosition, transform.position.y, -20);
 			}
 		}
-
 	}
 }
