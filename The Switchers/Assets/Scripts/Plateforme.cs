@@ -13,6 +13,7 @@ public class Plateforme : MonoBehaviour {
 	Animator anim;
 	public Vector2[] tabDestination;
 	public bool isMoving;
+	public bool isActivable;
 	public Vector2 nextDestination;
 
 	private Rigidbody2D rb;
@@ -30,19 +31,21 @@ public class Plateforme : MonoBehaviour {
 
 		anim.SetBool ("isSpirit", isSpirit);
 
-		if (!isMovingAlone) {
-			if (actionneur.isActive && !isMoving) {
-				isMoving = true;
-			}
-			if (!actionneur.isActive && isMoving) {
-				isMoving = false;
-			}
-		} else {
-			if (actionneur.isActive && isMoving) {
-				isMoving = false;
-			}
-			if (!actionneur.isActive && !isMoving) {
-				isMoving = true;
+		if (isActivable) {
+			if (!isMovingAlone) {
+				if (actionneur.isActive && !isMoving) {
+					isMoving = true;
+				}
+				if (!actionneur.isActive && isMoving) {
+					isMoving = false;
+				}
+			} else {
+				if (actionneur.isActive && isMoving) {
+					isMoving = false;
+				}
+				if (!actionneur.isActive && !isMoving) {
+					isMoving = true;
+				}
 			}
 		}
 

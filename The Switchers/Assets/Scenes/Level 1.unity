@@ -247,6 +247,7 @@ MonoBehaviour:
   isMovingAlone: 0
   tabDestination: []
   isMoving: 0
+  isActivable: 0
   nextDestination: {x: 0, y: 0}
 --- !u!1001 &299774459
 Prefab:
@@ -370,6 +371,7 @@ MonoBehaviour:
   isMovingAlone: 0
   tabDestination: []
   isMoving: 0
+  isActivable: 0
   nextDestination: {x: 0, y: 0}
 --- !u!1 &346675150
 GameObject:
@@ -1245,6 +1247,7 @@ MonoBehaviour:
   - {x: -14, y: 2}
   - {x: 0, y: 2}
   isMoving: 0
+  isActivable: 1
   nextDestination: {x: 0, y: 2}
 --- !u!61 &1966342695
 BoxCollider2D:

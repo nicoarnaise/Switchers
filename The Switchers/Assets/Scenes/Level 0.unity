@@ -608,6 +608,7 @@ MonoBehaviour:
   isMovingAlone: 0
   tabDestination: []
   isMoving: 0
+  isActivable: 0
   nextDestination: {x: 0, y: 0}
 --- !u!61 &361422009
 BoxCollider2D:
@@ -900,6 +901,7 @@ MonoBehaviour:
   isMovingAlone: 0
   tabDestination: []
   isMoving: 0
+  isActivable: 0
   nextDestination: {x: 0, y: 0}
 --- !u!61 &1042416450
 BoxCollider2D:
@@ -1292,6 +1294,7 @@ MonoBehaviour:
   - {x: -12, y: 5}
   - {x: -4, y: 5}
   isMoving: 0
+  isActivable: 1
   nextDestination: {x: -12, y: 5}
 --- !u!61 &1329184379
 BoxCollider2D:
