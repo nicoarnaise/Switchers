@@ -33,11 +33,13 @@ public class Cadavre : MonoBehaviour {
 
 		if (!isFree) {
 			isFree = true;
+            anim.SetTrigger("liberation");
 			GlobalState gs = globalState.GetComponent<GlobalState>();
 			gs.nbCadavre++;
+            anim.SetBool("isFree", true);
 
-			// Animation cadavre
-			//	anim.SetBool("Activated", isActive);
-		}
+            // Animation cadavre
+            //	anim.SetBool("Activated", isActive);
+        }
 	}
 }

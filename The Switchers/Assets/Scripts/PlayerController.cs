@@ -181,8 +181,9 @@ public class PlayerController : MonoBehaviour {
 		// Jump
 
 		isGrounded = groundChecker.isTriggered;
-		animator.SetBool ("isGround", isGrounded);
-		animator.SetFloat ("vSpeed", rb.velocity.y);
+		animator.SetBool("isGround", isGrounded);
+		animator.SetFloat("vSpeed", rb.velocity.y);
+        animator.SetFloat("hSpeed", Mathf.Abs(rb.velocity.x));
 
 		// Movement
 
@@ -212,7 +213,7 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			// Cadavre
-			if (other.gameObject.CompareTag ("Cadavre")) {
+			if (other.gameObject.CompareTag ("Cadavre") && isSpirit) {
 				Cadavre cadavre = other.gameObject.GetComponent<Cadavre>();
 				cadavre.activate();
 				isActivating = true;
@@ -242,7 +243,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Flip(){
-		if ((facingRight && rb.velocity.x < 0) || (!facingRight && rb.velocity.x > 0)) {
+		if ((facingRight && rb.velocity.x < -0.1) || (!facingRight && rb.velocity.x > 0.1)) {
 			Vector3 theScale = transform.localScale;
 			theScale.x *= -1;
 			transform.localScale = theScale;

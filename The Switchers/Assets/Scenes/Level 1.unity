@@ -90,6 +90,12 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &147808618 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012552526952, guid: ab916e70b004d447080fb7eaf488ff51,
+    type: 2}
+  m_PrefabInternal: {fileID: 1727687178}
+  m_Script: {fileID: 11500000, guid: ad8e2344ab656472fb945a255440def3, type: 3}
 --- !u!1 &155251089
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,9 +829,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 16, y: 10}
+  m_Offset: {x: 16, y: 7.607622}
   serializedVersion: 2
-  m_Size: {x: 1, y: 5}
+  m_Size: {x: 1, y: 9.784756}
 --- !u!1001 &1342804178
 Prefab:
   m_ObjectHideFlags: 0
@@ -1014,18 +1020,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf000d95005b54a9cb99a3eb7f733f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbCadavre: 0
   plateformes:
   - {fileID: 299774463}
   - {fileID: 231587732}
   - {fileID: 1966342694}
   ennemis: []
   actionneurs:
-  - {fileID: 0}
-  cadavres: []
+  - {fileID: 1365175720}
+  cadavres:
+  - {fileID: 147808618}
   murs:
   - {fileID: 1123340111}
-  - {fileID: 0}
 --- !u!4 &1503733970
 Transform:
   m_ObjectHideFlags: 0
