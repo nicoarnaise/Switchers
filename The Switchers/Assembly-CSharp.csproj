@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Cadavre.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Ennemi.cs" />
+     <Compile Include="Assets\Scripts\GlobalState.cs" />
      <Compile Include="Assets\Scripts\GroundChecker.cs" />
      <Compile Include="Assets\Scripts\HumainRetourne.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />

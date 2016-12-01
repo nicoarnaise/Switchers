@@ -9,6 +9,7 @@ public class Plateforme : MonoBehaviour {
 
 	public bool isSpirit;
 	public int statut;
+	public bool isMovingAlone;
 	Animator anim;
 	public Vector2[] tabDestination;
 	public bool isMoving;
@@ -29,12 +30,20 @@ public class Plateforme : MonoBehaviour {
 
 		anim.SetBool ("isSpirit", isSpirit);
 
-		if (actionneur.isActive && !isMoving) {
-			isMoving = true;
-		}
-
-		if (!actionneur.isActive && isMoving) {
-			isMoving = false;
+		if (!isMovingAlone) {
+			if (actionneur.isActive && !isMoving) {
+				isMoving = true;
+			}
+			if (!actionneur.isActive && isMoving) {
+				isMoving = false;
+			}
+		} else {
+			if (actionneur.isActive && isMoving) {
+				isMoving = false;
+			}
+			if (!actionneur.isActive && !isMoving) {
+				isMoving = true;
+			}
 		}
 
 		if (isMoving) {

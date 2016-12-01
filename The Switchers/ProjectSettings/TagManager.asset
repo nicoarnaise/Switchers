@@ -11,6 +11,9 @@ TagManager:
   - Bords
   - Actionneur
   - Ennemi
+  - Cadavre
+  - NextLevel
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

@@ -17,8 +17,8 @@ public class Actionneur : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		anim.SetBool ("isSpirit", isSpirit);
-	//	transform.position = support.transform.position;
 	
 	}
 
@@ -37,7 +37,7 @@ public class Actionneur : MonoBehaviour {
 	}
 
 	// Plaque Enter
-	void OnTriggerEnter2D(Collider2D collider){
+	/*void OnTriggerEnter2D(Collider2D collider){
 		
 		if (collider.gameObject.CompareTag ("Player") && gameObject.CompareTag ("Plaque")) {
 			isActive = true;
@@ -51,7 +51,30 @@ public class Actionneur : MonoBehaviour {
 			isActive = false;
 			anim.SetBool ("Activated", isActive);
 		}
-	}
+	}*/
 
+	// Plaque 
+	void OnTriggerStay2D(Collider2D collider){
+
+		if (gameObject.CompareTag ("Plaque")) {
+			// Player
+			if (collider.gameObject.CompareTag ("Player")) {
+				isActive = true;
+			} else {
+				// Cadavre
+				if (collider.gameObject.CompareTag ("Cadavre")) {
+					Cadavre cadavre = collider.gameObject.GetComponent<Cadavre> ();
+					if (!cadavre.isFree) {
+						isActive = true;
+					} else {  
+						isActive = false;
+					} 
+				} else {
+					isActive = false;
+				}
+			}
+			anim.SetBool ("Activated", isActive);
+		}
+	}
 
 }

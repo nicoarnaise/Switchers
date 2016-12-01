@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Level : MonoBehaviour {
 
-	public int nbCadavre;
 	public Plateforme[] plateformes; 
 	public Ennemi[] ennemis; 
 	public Actionneur[] actionneurs;

@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
 	public Level level;
+	public int sceneIndex;
 
 	public bool isSpirit;
 
@@ -199,15 +201,26 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D other){
 
-		// Actionneur
+
 		if (Input.GetKeyDown(KeyCode.DownArrow) && !isActivating && !isTimerOn){
 
+			// Actionneur
 			if (other.gameObject.CompareTag ("Actionneur")) {
 				Actionneur actionneur = other.gameObject.GetComponent<Actionneur>();
 				actionneur.activate();
 				isActivating = true;
 			}
+
+			// Cadavre
+			if (other.gameObject.CompareTag ("Cadavre")) {
+				Cadavre cadavre = other.gameObject.GetComponent<Cadavre>();
+				cadavre.activate();
+				isActivating = true;
+			}
+
 		}
+
+
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
@@ -215,6 +228,16 @@ public class PlayerController : MonoBehaviour {
 		if (collider.gameObject.CompareTag ("Ennemi")) {
 			transform.position = checkpoint.transform.position;
 		}
+
+		if (collider.gameObject.CompareTag ("NextLevel")) {
+			SceneManager.LoadScene (sceneIndex);
+		}
+
+		if (collider.gameObject.CompareTag ("CheckPoint")) {
+			checkpoint = collider.gameObject;
+		}
+
+
 
 	}
 

@@ -4,6 +4,8 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
 	public GameObject player;
+	public int startLevelPosition;
+	public int finishLevelPosition;
 	// Use this for initialization
 
 	private float offset;
@@ -17,8 +19,16 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.position = new Vector3(player.transform.position.x + offset,transform.position.y, -20);
+		float positionX = player.transform.position.x;
+		if (positionX < startLevelPosition) {
+			transform.position = new Vector3 ((float)startLevelPosition, transform.position.y, -20);
+		} else {
+			if (positionX > startLevelPosition && positionX < finishLevelPosition) {
+				transform.position = new Vector3 (player.transform.position.x + offset, transform.position.y, -20);
+			} else {
+				transform.position = new Vector3 ((float)finishLevelPosition, transform.position.y, -20);
+			}
+		}
+
 	}
-
-
 }
