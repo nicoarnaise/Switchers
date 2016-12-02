@@ -132,7 +132,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 100, y: 1}
+  m_Size: {x: 200, y: 1}
 --- !u!1 &378955849
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +899,7 @@ MonoBehaviour:
   player: {fileID: 1831909381}
   startLevelPosition: -12
   finishLevelPosition: 20
+  verticalInit: 0
 --- !u!1 &1305301538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,6 +1159,7 @@ MonoBehaviour:
   statut: 0
   isSpirit: 0
   isActive: 0
+  cadavre: {fileID: 0}
 --- !u!1 &1634038055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1739,16 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
   m_IsPrefabParent: 0
@@ -1764,6 +1776,7 @@ MonoBehaviour:
   statut: 0
   isSpirit: 0
   isActive: 1
+  cadavre: {fileID: 2114416008}
 --- !u!1 &2065746490
 GameObject:
   m_ObjectHideFlags: 0

@@ -971,7 +971,7 @@ Prefab:
     - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
         type: 2}
       propertyPath: m_Size.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
         type: 2}
@@ -1010,6 +1010,7 @@ MonoBehaviour:
   statut: 0
   isSpirit: 0
   isActive: 1
+  cadavre: {fileID: 147808618}
 --- !u!1 &1503733968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,6 +1366,7 @@ MonoBehaviour:
   player: {fileID: 727527163}
   startLevelPosition: -10
   finishLevelPosition: -1
+  verticalInit: 0
 --- !u!1 &1981495346
 GameObject:
   m_ObjectHideFlags: 0

@@ -143,7 +143,6 @@ public class PlayerController : MonoBehaviour {
             {
                 Cadavre cadavre = (Cadavre)level.cadavres[i];
                 cadavre.isSpirit = isSpirit;
-                cadavre.gameObject.SetActive(cadavre.statut == 0 || isSpirit && cadavre.statut == 2 || !isSpirit && cadavre.statut == 1);
             }
 
             for (int i = 0; i < lengthPlateformes; i++)

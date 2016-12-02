@@ -26,6 +26,10 @@ public class Cadavre : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		anim.SetBool ("isSpirit", isSpirit);
+		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("free")) {
+			
+			gameObject.SetActive (false);
+		}
 		
 	}
 
@@ -38,8 +42,6 @@ public class Cadavre : MonoBehaviour {
 			gs.nbCadavre++;
             anim.SetBool("isFree", true);
 
-            // Animation cadavre
-            //	anim.SetBool("Activated", isActive);
         }
 	}
 }

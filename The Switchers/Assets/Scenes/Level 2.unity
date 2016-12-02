@@ -1024,6 +1024,9 @@ MonoBehaviour:
   player: {fileID: 956172186}
   startLevelPosition: -10
   finishLevelPosition: -1
+  verticalInit: 0
+  topLimit: 8
+  botLimit: -2
 --- !u!1 &1121871321
 GameObject:
   m_ObjectHideFlags: 0
