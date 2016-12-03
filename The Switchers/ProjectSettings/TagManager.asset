@@ -23,9 +23,9 @@ TagManager:
   - UI
   - 
   - 
-  - player
   - ground
-  - 
+  - player
+  - nonGroundPlateform
   - 
   - 
   - 

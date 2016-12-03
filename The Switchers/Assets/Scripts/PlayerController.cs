@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour {
 	public GameObject checkpoint;
 
     private Animator animator;
-
 	private Rigidbody2D rb;
 	public bool facingRight;
 
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 		isTimerOn = false;
 		isActivating = false;
 		hasJumped = false;
-		period = 0.1f;
+        period = 0.1f;
 		rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
@@ -44,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 		int lengthCadavres = level.cadavres.Length;
 		int lengthPlateformes = level.plateformes.Length;
 		int lengthMurs = level.murs.Length;
+
+        Physics2D.IgnoreLayerCollision(9, 10);
 
         animator.SetBool("isSpirit", isSpirit);
         for (int i = 0; i < lengthActionneurs; i++)
@@ -112,9 +113,10 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if (isGrounded && Input.GetButtonDown("Jump")) {	
+		if (isGrounded && Input.GetButtonDown("Jump")) {
+            rb.isKinematic = false;	
 			animator.SetBool ("isGround", false);
-			rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
 			}
 
 		if (Input.GetButtonDown ("Switch")) {
@@ -170,9 +172,7 @@ public class PlayerController : MonoBehaviour {
                 mur.isSpirit = isSpirit;
                 mur.gameObject.SetActive(mur.statut == 0 || isSpirit && mur.statut == 2 || !isSpirit && mur.statut == 1);
             }
-        }
-
-
+        }      
 	}
 
 	void FixedUpdate(){
@@ -189,15 +189,16 @@ public class PlayerController : MonoBehaviour {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		Vector2 velocity = rb.velocity;
 		if (isGrounded) {
-			velocity.x = moveHorizontal * moveSpeed;
-		} else {
+            velocity.x = moveHorizontal * moveSpeed;
+        } else {
 			// While in the air, player can influence movement by 10%
 			velocity.x = (velocity.x * flyInertia + moveHorizontal * moveSpeed * (1 - flyInertia));
 		}
-		rb.velocity = velocity;
-		
 
-	}
+        rb.isKinematic = isGrounded && rb.velocity.y == 0 && velocity.x == 0;
+        rb.velocity = velocity;
+
+    }
 
 	void OnTriggerStay2D(Collider2D other){
 
@@ -224,6 +225,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
+
 
 		if (collider.gameObject.CompareTag ("Ennemi")) {
 			transform.position = checkpoint.transform.position;

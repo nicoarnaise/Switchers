@@ -23,7 +23,7 @@ public class Plateforme : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
-	
+
 	}
 	
 	// Update is called once per frame
@@ -51,16 +51,13 @@ public class Plateforme : MonoBehaviour {
 
 		if (isMoving) {
 			makeMove ();
-		}
+        }
 
 	}
 
-	public void makeMove(){
-
-
-
-
-		transform.position = Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed);
+    public void makeMove() {
+        
+        ((Rigidbody2D)GetComponent<Rigidbody2D>()).MovePosition(Vector2.MoveTowards (transform.position, nextDestination, Time.deltaTime * moveSpeed));
 
 		if ((Vector2)transform.position == nextDestination) {
 			if (pointeurDest == tabDestination.Length) {
@@ -74,18 +71,20 @@ public class Plateforme : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider){
 
-		if (collider.gameObject.CompareTag ("Player")) {
+		if (collider.gameObject.CompareTag ("Player") && collider.transform.parent.CompareTag("Player")) {
 			collider.transform.parent.parent = gameObject.transform;
-		} else {
+            gameObject.layer = 8;
+        } else {
 			collider.transform.parent = gameObject.transform;
 
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
-		if (collider.gameObject.CompareTag ("Player")) {
+		if (collider.gameObject.CompareTag ("Player") && collider.transform.parent.parent.gameObject == gameObject) {
 			collider.transform.parent.parent = null;
-		} else {
+            gameObject.layer = 10;
+        } else {
 			collider.transform.parent = null;
 		}
 	}
