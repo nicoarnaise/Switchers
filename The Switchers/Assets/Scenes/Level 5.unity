@@ -1533,10 +1533,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 614793999}
-  m_LocalRotation: {x: -0, y: -0, z: 0.016466705, w: 0.99986446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -27.6, y: 9.1, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.8320001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1881880130}
   m_Father: {fileID: 0}
@@ -2089,6 +2089,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: -863043091
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014164321230, guid: 7b5425784e0bd6743a97f80c5c2d0403, type: 2}
+      propertyPath: m_TagString
+      value: Background
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b5425784e0bd6743a97f80c5c2d0403, type: 2}
   m_IsPrefabParent: 0
@@ -2097,6 +2101,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011511233880, guid: 7b5425784e0bd6743a97f80c5c2d0403,
     type: 2}
   m_PrefabInternal: {fileID: 864449660}
+--- !u!114 &864449662 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011219579922, guid: 7b5425784e0bd6743a97f80c5c2d0403,
+    type: 2}
+  m_PrefabInternal: {fileID: 864449660}
+  m_Script: {fileID: 11500000, guid: a5ac4924aa27beb46a69aeaa0c3708a7, type: 3}
 --- !u!1 &877962244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2330,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 864449661}
+  - {fileID: 1099650566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &900795561
@@ -3223,6 +3234,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statut: 2
   isSpirit: 1
+--- !u!1001 &1099650565
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 900795560}
+    m_Modifications:
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d093d46a2dd35fa4e8d82070e6894cf0, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1099650566 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010870108262, guid: d093d46a2dd35fa4e8d82070e6894cf0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1099650565}
+--- !u!114 &1099650567 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012300512370, guid: d093d46a2dd35fa4e8d82070e6894cf0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1099650565}
+  m_Script: {fileID: 11500000, guid: a5ac4924aa27beb46a69aeaa0c3708a7, type: 3}
 --- !u!1 &1115983400
 GameObject:
   m_ObjectHideFlags: 0
@@ -4861,6 +4925,9 @@ MonoBehaviour:
   - {fileID: 581735093}
   - {fileID: 1065062521}
   - {fileID: 1962773248}
+  backgrounds:
+  - {fileID: 864449662}
+  - {fileID: 1099650567}
 --- !u!4 &1886381368
 Transform:
   m_ObjectHideFlags: 0

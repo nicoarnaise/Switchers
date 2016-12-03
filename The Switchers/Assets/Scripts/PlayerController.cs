@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour {
 		int lengthCadavres = level.cadavres.Length;
 		int lengthPlateformes = level.plateformes.Length;
 		int lengthMurs = level.murs.Length;
+        int lengthBackground = level.backgrounds.Length;
 
         Physics2D.IgnoreLayerCollision(9, 10);
 
@@ -91,6 +92,11 @@ public class PlayerController : MonoBehaviour {
             mur.isSpirit = isSpirit;
             mur.gameObject.SetActive(mur.statut == 0 || isSpirit && mur.statut == 2 || !isSpirit && mur.statut == 1);
         }
+        for (int i = 0; i < lengthBackground; i++)
+        {
+            backgroundAdapter back = (backgroundAdapter)level.backgrounds[i];
+            back.changeUnivers(isSpirit);
+        }
     }
 		
 	
@@ -127,7 +133,7 @@ public class PlayerController : MonoBehaviour {
 			int lengthCadavres = level.cadavres.Length;
 			int lengthPlateformes = level.plateformes.Length;
 			int lengthMurs = level.murs.Length;
-
+            int lengthBackground = level.backgrounds.Length;
 
             for (int i = 0; i < lengthActionneurs; i++)
             {
@@ -171,6 +177,11 @@ public class PlayerController : MonoBehaviour {
                 Mur mur = (Mur)level.murs[i];
                 mur.isSpirit = isSpirit;
                 mur.gameObject.SetActive(mur.statut == 0 || isSpirit && mur.statut == 2 || !isSpirit && mur.statut == 1);
+            }
+            for (int i = 0; i < lengthBackground; i++)
+            {
+                backgroundAdapter back = (backgroundAdapter)level.backgrounds[i];
+                back.changeUnivers(isSpirit);
             }
         }      
 	}

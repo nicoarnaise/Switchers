@@ -64,4 +64,9 @@ public class backgroundAdapter : MonoBehaviour {
         // apply change
         transform.localScale = imgScale;
     }
+
+    public void changeUnivers(bool isSpirit)
+    {
+        gameObject.SetActive(transform.CompareTag("SpiritBackground") == isSpirit);
+    }
 }
