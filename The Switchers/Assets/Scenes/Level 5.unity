@@ -136,9 +136,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &73737905
 Animator:
   serializedVersion: 3
@@ -277,9 +277,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &143086481
 Animator:
   serializedVersion: 3
@@ -437,9 +437,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &162341109
 Animator:
   serializedVersion: 3
@@ -719,9 +719,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &292791226
 Animator:
   serializedVersion: 3
@@ -862,9 +862,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &408746076
 Animator:
   serializedVersion: 3
@@ -1095,9 +1095,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &544811849
 Animator:
   serializedVersion: 3
@@ -1627,9 +1627,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &658867865
 Animator:
   serializedVersion: 3
@@ -1782,9 +1782,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &726479748
 Animator:
   serializedVersion: 3
@@ -2394,9 +2394,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &925942129
 Animator:
   serializedVersion: 3
@@ -2554,9 +2554,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &926317667
 Animator:
   serializedVersion: 3
@@ -2693,9 +2693,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &928863968
 Animator:
   serializedVersion: 3
@@ -2864,9 +2864,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1001720456
 Animator:
   serializedVersion: 3
@@ -3027,9 +3027,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1021728686
 Animator:
   serializedVersion: 3
@@ -3605,9 +3605,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1183065170
 Animator:
   serializedVersion: 3
@@ -3788,9 +3788,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1213299172
 Animator:
   serializedVersion: 3
@@ -3948,9 +3948,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1218945505
 Animator:
   serializedVersion: 3
@@ -4087,9 +4087,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1315562465
 Animator:
   serializedVersion: 3
@@ -4331,9 +4331,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1565092922
 Animator:
   serializedVersion: 3
@@ -4470,9 +4470,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1594628288
 Animator:
   serializedVersion: 3
@@ -5238,9 +5238,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &2119163001
 Animator:
   serializedVersion: 3

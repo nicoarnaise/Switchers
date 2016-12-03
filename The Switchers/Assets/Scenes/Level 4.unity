@@ -247,9 +247,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &16562452
 Animator:
   serializedVersion: 3
@@ -717,9 +717,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &213059049
 Animator:
   serializedVersion: 3
@@ -856,9 +856,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &277442852
 Animator:
   serializedVersion: 3
@@ -1186,9 +1186,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &406499532
 Animator:
   serializedVersion: 3
@@ -1432,9 +1432,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &414046500
 Animator:
   serializedVersion: 3
@@ -1573,9 +1573,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &419456593
 Animator:
   serializedVersion: 3
@@ -1714,9 +1714,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &491846676
 Animator:
   serializedVersion: 3
@@ -1853,9 +1853,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &531471591
 Animator:
   serializedVersion: 3
@@ -2079,9 +2079,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &687491779
 Animator:
   serializedVersion: 3
@@ -2657,9 +2657,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1369024801
 Animator:
   serializedVersion: 3
@@ -3187,9 +3187,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1595806190
 Animator:
   serializedVersion: 3
@@ -3326,9 +3326,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1606085298
 Animator:
   serializedVersion: 3
@@ -3810,9 +3810,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1822453074
 Animator:
   serializedVersion: 3
@@ -3949,9 +3949,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.4}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1.218585}
+  m_Size: {x: 6.173117, y: 0.4}
 --- !u!95 &1832251563
 Animator:
   serializedVersion: 3
