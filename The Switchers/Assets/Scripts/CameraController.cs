@@ -28,32 +28,41 @@ public class CameraController : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
+
+		PlayerController pc = player.GetComponent<PlayerController> ();
+
 		float positionY = player.transform.position.y;
 		float positionX = player.transform.position.x;
 
 		float cameraX;
 		float cameraY;
 
-		if (positionY > topLimit) {
-			cameraY = positionY - verticalTopOffset;
+		if (pc.isBonus) {
+			Debug.Log ("coucou");
+			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -20);
 		} else {
-			if (positionY < topLimit && positionY > botLimit) {
-				cameraY = verticalInit;
-			} else {
-				cameraY = positionY + verticalBotOffset;
-			}
-		}
 
-		if (positionX < startLevelPosition) {
-			cameraX = startLevelPosition;
-		} else {
-			if (positionX > startLevelPosition && positionX < finishLevelPosition) {
-				cameraX = player.transform.position.x + offset;
+			if (positionY > topLimit) {
+				cameraY = positionY - verticalTopOffset;
 			} else {
-				cameraX = finishLevelPosition;
+				if (positionY < topLimit && positionY > botLimit) {
+					cameraY = verticalInit;
+				} else {
+					cameraY = positionY + verticalBotOffset;
+				}
 			}
-		}
 
-		transform.position = new Vector3 (cameraX, cameraY, -20);
+			if (positionX < startLevelPosition) {
+				cameraX = startLevelPosition;
+			} else {
+				if (positionX > startLevelPosition && positionX < finishLevelPosition) {
+					cameraX = player.transform.position.x + offset;
+				} else {
+					cameraX = finishLevelPosition;
+				}
+			}
+
+			transform.position = new Vector3 (cameraX, cameraY, -20);
+		}
 	}
 }

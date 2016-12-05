@@ -8,6 +8,7 @@ public class Plateforme : MonoBehaviour {
 	public int moveSpeed;
 
 	public bool isSpirit;
+	public bool isMobile;
 	public int statut;
 	public bool isMovingAlone;
 	Animator anim;
@@ -75,7 +76,9 @@ public class Plateforme : MonoBehaviour {
 			collider.transform.parent.parent = gameObject.transform;
             gameObject.layer = 8;
         } else {
-			collider.transform.parent = gameObject.transform;
+			if (!isMobile) {
+				collider.transform.parent = gameObject.transform;
+			}
 
 		}
 	}

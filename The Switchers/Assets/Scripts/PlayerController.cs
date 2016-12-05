@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public int sceneIndex;
 
 	public bool isSpirit;
+	public bool isBonus;
 
 	public bool isPhysic;
 	public bool isGrounded;
@@ -269,7 +270,15 @@ public class PlayerController : MonoBehaviour {
 			checkpoint = collider.gameObject;
 		}
 
-
+		if (collider.gameObject.CompareTag ("Bonus")) {
+			if (!isBonus) {
+				transform.position = new Vector3 (-105, -22, 0);
+				isBonus = true;
+			} else {
+				transform.position = new Vector3 (-27, -22, 0);
+				isBonus = false;
+			}
+		}
 
 	}
 
