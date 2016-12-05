@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
+	public Image pausePanel;
 	public Level level;
+	public GameObject globalState;
 	public int sceneIndex;
 
 	public bool isSpirit;
@@ -102,6 +105,15 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		// Menu Pause
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (Time.timeScale != 0) {
+				pause ();
+			} else {
+				reprendre ();
+			}
+		}
 
 		//Movement direction control
 		Flip();
@@ -244,6 +256,9 @@ public class PlayerController : MonoBehaviour {
 
 		if (collider.gameObject.CompareTag ("NextLevel")) {
 			SceneManager.LoadScene (sceneIndex);
+
+			GlobalState gs = globalState.GetComponent<GlobalState>();
+			gs.currentScene++;
 		}
 
 		if (collider.gameObject.CompareTag ("CheckPoint")) {
@@ -261,6 +276,28 @@ public class PlayerController : MonoBehaviour {
 			transform.localScale = theScale;
 			facingRight = !facingRight;
 		}
+	}
+
+
+
+
+	public void pause(){
+		pausePanel.gameObject.SetActive (true);
+		Time.timeScale = 0;
+	}
+
+	public void reprendre(){
+
+		Time.timeScale = 1;
+		pausePanel.gameObject.SetActive (false);
+
+	}
+
+	public void retourMenu(){
+		Debug.Log ("coucou");
+		Time.timeScale = 1;
+		pausePanel.gameObject.SetActive (false);
+		SceneManager.LoadScene (6);
 	}
 
 

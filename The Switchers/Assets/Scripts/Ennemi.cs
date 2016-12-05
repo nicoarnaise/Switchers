@@ -4,9 +4,6 @@ using System.Collections;
 public class Ennemi : MonoBehaviour {
 
 	public int statut;
-	public Plateforme support;
-	public Vector2 destination1;
-	public Vector2 destination2;
 	public bool isSpirit;
 	public bool isMoving;
 	public int moveSpeed;
@@ -14,7 +11,6 @@ public class Ennemi : MonoBehaviour {
 
 	bool facingRight = false;
 
-	public Vector2 nextDestination;
 
 	private Rigidbody2D rb;
 	// Use this for initialization
