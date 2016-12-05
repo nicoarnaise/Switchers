@@ -22,6 +22,10 @@ public class Actionneur : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+        if (cadavre != null)
+        {
+            hasCadavre = true;
+        }
 	}
 	
 	// Update is called once per frame

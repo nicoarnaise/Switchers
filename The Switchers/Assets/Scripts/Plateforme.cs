@@ -75,21 +75,18 @@ public class Plateforme : MonoBehaviour {
 		if (collider.gameObject.CompareTag ("Player") && collider.transform.parent.CompareTag("Player")) {
 			collider.transform.parent.parent = gameObject.transform;
             gameObject.layer = 8;
-        } else {
-			if (!isMobile) {
-				collider.transform.parent = gameObject.transform;
-			}
-
-		}
+        } else if (collider.gameObject.CompareTag("Player"))
+        {
+            collider.transform.parent = gameObject.transform;
+            gameObject.layer = 8;
+        }
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
 		if (collider.gameObject.CompareTag ("Player") && collider.transform.parent.parent.gameObject == gameObject) {
 			collider.transform.parent.parent = null;
             gameObject.layer = 10;
-        } else {
-			collider.transform.parent = null;
-		}
+        }
 	}
 
 }
