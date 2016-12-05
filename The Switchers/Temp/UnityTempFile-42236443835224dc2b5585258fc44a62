@@ -85,7 +85,6 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 'Assets/Scripts/Actionneur.cs'
-'Assets/Scripts/ButtonsInteraction.cs'
 'Assets/Scripts/Cadavre.cs'
 'Assets/Scripts/CameraController.cs'
 'Assets/Scripts/Canvas.cs'

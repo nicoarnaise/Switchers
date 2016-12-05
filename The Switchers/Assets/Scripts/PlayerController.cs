@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D rb;
 	public bool facingRight;
 
+	void Awake (){
+		globalState = GameObject.Find("GlobalState");
+	}
 	// Use this for initialization
 	void Start () {
 		isTimerOn = false;
@@ -255,10 +258,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (collider.gameObject.CompareTag ("NextLevel")) {
-			SceneManager.LoadScene (sceneIndex);
-
 			GlobalState gs = globalState.GetComponent<GlobalState>();
 			gs.currentScene++;
+			SceneManager.LoadScene (sceneIndex);
+
+
 		}
 
 		if (collider.gameObject.CompareTag ("CheckPoint")) {
@@ -279,10 +283,14 @@ public class PlayerController : MonoBehaviour {
 	}
 
 
-
+	public void save(){
+		GlobalState gs = globalState.GetComponent<GlobalState>();
+		gs.Save ();
+	}
 
 	public void pause(){
 		pausePanel.gameObject.SetActive (true);
+
 		Time.timeScale = 0;
 	}
 
@@ -294,7 +302,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void retourMenu(){
-		Debug.Log ("coucou");
 		Time.timeScale = 1;
 		pausePanel.gameObject.SetActive (false);
 		SceneManager.LoadScene (6);

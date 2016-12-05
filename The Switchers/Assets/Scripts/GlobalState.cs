@@ -9,7 +9,6 @@ using System.IO;
 public class GlobalState : MonoBehaviour {
 
 	public static GlobalState globalState;
-	public Button bs;
 	public Button b1;
 	public Button b2;
 	public Button b3;
@@ -29,28 +28,16 @@ public class GlobalState : MonoBehaviour {
 		} else if (globalState != this) {
 			Destroy (gameObject);
 		}
-
-
-
-
 	}
 
 	void Update(){
 
 		if (SceneManager.GetActiveScene ().buildIndex == 6) {
 			findButtons ();
-		} else {
-			saveButton ();
-		}
+		} 
 		
 	}
-
-	public void saveButton(){
-		bs = GameObject.Find("Canvas/Panel/Save").GetComponent<Button>();
-		bs.onClick.AddListener (() => {
-			Save ();
-		});
-	}
+		
 
 	public void findButtons(){
 			b1 = GameObject.Find("Canvas/Panel/NP").GetComponent<Button>();
@@ -65,6 +52,12 @@ public class GlobalState : MonoBehaviour {
 			b3.onClick.AddListener (() => {
 				quit ();
 			});
+
+		if (!hasStarted) {
+			b2.interactable = false;
+		} else {
+			b2.interactable = true;
+		}
 		
 	}
 
@@ -72,6 +65,7 @@ public class GlobalState : MonoBehaviour {
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (Application.persistentDataPath + "/gameInfo.dat");
 
+		hasStarted = true;
 		GameData data = new GameData (); 
 		data.nbCadavre = nbCadavre;
 		data.nbCadavreTot = nbCadavreTot;
@@ -82,6 +76,7 @@ public class GlobalState : MonoBehaviour {
 
 		bf.Serialize (file, data);
 		file.Close ();
+
 	}
 
 	public void Load(){
@@ -105,7 +100,6 @@ public class GlobalState : MonoBehaviour {
 		for (int i=0; i<8; i++){
 			nbCavavreCurrent [i] = 0;
 		}
-		hasStarted = true;
 		SceneManager.LoadScene (0);
 	}
 

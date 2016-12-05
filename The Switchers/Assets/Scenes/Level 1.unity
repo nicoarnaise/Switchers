@@ -100,7 +100,7 @@ GameObject:
   - 224: {fileID: 6875145}
   - 222: {fileID: 6875147}
   - 114: {fileID: 6875146}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - 222: {fileID: 614431967}
   - 114: {fileID: 614431966}
   - 114: {fileID: 614431965}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,8 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 1412897968}
   level: {fileID: 1503733969}
-  globalState: {fileID: 1000013922785100, guid: fc8aa58a07ddb425facf786e8c57ecd1,
-    type: 2}
+  globalState: {fileID: 0}
   sceneIndex: 2
   isSpirit: 0
   isPhysic: 0
@@ -884,7 +883,7 @@ GameObject:
   - 224: {fileID: 846926232}
   - 222: {fileID: 846926234}
   - 114: {fileID: 846926233}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1013,7 @@ GameObject:
   - 222: {fileID: 955306374}
   - 114: {fileID: 955306373}
   - 114: {fileID: 955306372}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1135,7 @@ GameObject:
   - 222: {fileID: 1051346250}
   - 114: {fileID: 1051346249}
   - 114: {fileID: 1051346248}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Save
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1200,7 +1199,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051346249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727527168}
+        m_MethodName: save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1051346249
@@ -1346,7 +1356,7 @@ GameObject:
   - 223: {fileID: 1153063181}
   - 114: {fileID: 1153063180}
   - 114: {fileID: 1153063179}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1732,7 +1742,7 @@ GameObject:
   - 222: {fileID: 1412897969}
   - 114: {fileID: 1412897968}
   - 114: {fileID: 1412897967}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1905,7 +1915,7 @@ GameObject:
   - 224: {fileID: 1519377284}
   - 222: {fileID: 1519377286}
   - 114: {fileID: 1519377285}
-  m_Layer: 9
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
