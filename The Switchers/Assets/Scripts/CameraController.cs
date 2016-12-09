@@ -38,7 +38,6 @@ public class CameraController : MonoBehaviour {
 		float cameraY;
 
 		if (pc.isBonus) {
-			Debug.Log ("coucou");
 			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -20);
 		} else {
 

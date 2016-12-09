@@ -686,7 +686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010630463160, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000010630463160, guid: 0c72646ddb9d26941a21c4021a3465ba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -885,6 +885,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -1351,6 +1352,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -1679,11 +1681,12 @@ MonoBehaviour:
   globalState: {fileID: 0}
   sceneIndex: 1
   isSpirit: 0
+  isBonus: 0
   isPhysic: 0
   isGrounded: 1
   moveSpeed: 10
   flyInertia: 0.9
-  jumpSpeed: 10
+  jumpSpeed: 20
   hasJumped: 0
   isActivating: 0
   isTimerOn: 0

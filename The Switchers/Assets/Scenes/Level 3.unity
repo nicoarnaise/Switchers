@@ -1233,8 +1233,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231277251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.2, y: -5.91, z: 0}
-  m_LocalScale: {x: 2.4819598, y: 1.08358, z: 1}
+  m_LocalPosition: {x: 12, y: -5.91, z: 0}
+  m_LocalScale: {x: 3, y: 1.08358, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1681722515}
@@ -2110,7 +2110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727136843}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.9, y: -2.7, z: 0}
+  m_LocalPosition: {x: 23.9, y: -2.34, z: 0}
   m_LocalScale: {x: 1, y: 2.232204, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   isGrounded: 1
   moveSpeed: 10
   flyInertia: 0.9
-  jumpSpeed: 10
+  jumpSpeed: 20
   hasJumped: 0
   isActivating: 0
   isTimerOn: 0
@@ -2529,8 +2529,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832251674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.6, y: 5.2, z: 0}
-  m_LocalScale: {x: 2.4819555, y: 1.186587, z: 1}
+  m_LocalPosition: {x: 35, y: 5.2, z: 0}
+  m_LocalScale: {x: 3.5, y: 1.186587, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1681722515}
@@ -2853,8 +2853,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2065746490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -6, z: 0}
-  m_LocalScale: {x: 1, y: -1.06743, z: 1}
+  m_LocalPosition: {x: -9, y: -6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1681722515}
@@ -2878,11 +2878,11 @@ MonoBehaviour:
   statut: 0
   isMovingAlone: 1
   tabDestination:
-  - {x: -5, y: -6}
-  - {x: -5, y: 5.3}
+  - {x: -9, y: -6}
+  - {x: -9, y: 5.3}
   isMoving: 0
   isActivable: 1
-  nextDestination: {x: -5, y: 5.3}
+  nextDestination: {x: -9, y: 5.3}
 --- !u!61 &2065746493
 BoxCollider2D:
   m_ObjectHideFlags: 0

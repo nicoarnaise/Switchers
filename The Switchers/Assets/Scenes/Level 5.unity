@@ -1141,7 +1141,7 @@ MonoBehaviour:
   - {x: -13, y: 6}
   - {x: -13, y: -4}
   - {x: -18, y: -4}
-  - {x: -18, y: -16}
+  - {x: -18, y: -12}
   isMoving: 0
   isActivable: 1
   nextDestination: {x: -13, y: -2}
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   isGrounded: 1
   moveSpeed: 10
   flyInertia: 0.9
-  jumpSpeed: 10
+  jumpSpeed: 20
   hasJumped: 0
   isActivating: 0
   isTimerOn: 0
@@ -4305,6 +4305,7 @@ Transform:
   - {fileID: 819086904}
   - {fileID: 926986048}
   - {fileID: 1004485641}
+  - {fileID: 1690781621}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1001720452
@@ -5302,7 +5303,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1144324892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.4, y: -26.8, z: 0}
+  m_LocalPosition: {x: -27.5, y: -26.8, z: 0}
   m_LocalScale: {x: 1.0675998, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -7497,6 +7498,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1690781620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000014216867320, guid: 083486ecf6d224da0a83628bf4ccfcf6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1690781621}
+  - 61: {fileID: 1690781622}
+  m_Layer: 0
+  m_Name: Checkpoint (3)
+  m_TagString: CheckPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690781621
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000011316973350, guid: 083486ecf6d224da0a83628bf4ccfcf6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690781620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -25, y: -25, z: 0}
+  m_LocalScale: {x: 2, y: 6, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 998139842}
+  m_RootOrder: 11
+--- !u!61 &1690781622
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1690781620}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2}
 --- !u!1 &1701473489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7671,7 +7717,7 @@ Transform:
   m_GameObject: {fileID: 1708202311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -20.9, y: -14.5, z: 0}
-  m_LocalScale: {x: 3.509021, y: 1, z: 1}
+  m_LocalScale: {x: 3.3, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1800512770}
@@ -7910,8 +7956,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742762413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.66, y: -1.6, z: 0}
-  m_LocalScale: {x: 1, y: 7.404741, z: 1}
+  m_LocalPosition: {x: -26.66, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 13, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 615144508}
@@ -9096,11 +9142,11 @@ MonoBehaviour:
   statut: 0
   isMovingAlone: 0
   tabDestination:
-  - {x: 55, y: 0}
+  - {x: 55, y: -10}
   - {x: 55, y: 10}
   isMoving: 0
   isActivable: 1
-  nextDestination: {x: 50, y: -15}
+  nextDestination: {x: 50, y: 10}
 --- !u!50 &2119163004
 Rigidbody2D:
   serializedVersion: 2

@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public bool isPhysic;
 	public bool isGrounded;
 	public int moveSpeed;
-	public float flyInertia = 0.9f;
+	public float flyInertia = 0.98f;
 	public int jumpSpeed;
 	public bool hasJumped;
 
@@ -270,13 +270,16 @@ public class PlayerController : MonoBehaviour {
 			checkpoint = collider.gameObject;
 		}
 
-		if (collider.gameObject.CompareTag ("Bonus")) {
+		if (collider.gameObject.CompareTag ("Bonus") && !isActivating && !isTimerOn) {
 			if (!isBonus) {
 				transform.position = new Vector3 (-105, -22, 0);
 				isBonus = true;
+				isActivating = true;
 			} else {
-				transform.position = new Vector3 (-27, -22, 0);
+				transform.position = new Vector3 (-30, -25, 0);
 				isBonus = false;
+				isActivating = true;
+				Debug.Log (isBonus);
 			}
 		}
 

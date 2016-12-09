@@ -230,6 +230,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -637,11 +638,12 @@ MonoBehaviour:
   globalState: {fileID: 0}
   sceneIndex: 5
   isSpirit: 0
+  isBonus: 0
   isPhysic: 0
   isGrounded: 1
   moveSpeed: 10
   flyInertia: 0.9
-  jumpSpeed: 10
+  jumpSpeed: 20
   hasJumped: 0
   isActivating: 0
   isTimerOn: 0
@@ -700,6 +702,7 @@ MonoBehaviour:
   pointeurDest: 1
   moveSpeed: 4
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination:
@@ -841,6 +844,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -1171,6 +1175,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -1415,6 +1420,7 @@ MonoBehaviour:
   pointeurDest: 1
   moveSpeed: 4
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 1
   tabDestination:
@@ -1556,6 +1562,7 @@ MonoBehaviour:
   pointeurDest: 1
   moveSpeed: 4
   isSpirit: 1
+  isMobile: 0
   statut: 2
   isMovingAlone: 0
   tabDestination:
@@ -1789,6 +1796,7 @@ MonoBehaviour:
   pointeurDest: 1
   moveSpeed: 4
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination:
@@ -1930,6 +1938,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -2156,6 +2165,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -3159,6 +3169,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -3811,6 +3822,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 1
+  isMobile: 0
   statut: 2
   isMovingAlone: 0
   tabDestination: []
@@ -3950,6 +3962,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -4630,6 +4643,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -4769,6 +4783,7 @@ MonoBehaviour:
   pointeurDest: 0
   moveSpeed: 0
   isSpirit: 0
+  isMobile: 0
   statut: 0
   isMovingAlone: 0
   tabDestination: []
@@ -5043,7 +5058,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085583127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -15, z: 0}
+  m_LocalPosition: {x: -10, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
