@@ -258,10 +258,11 @@ public class PlayerController : MonoBehaviour {
 			transform.position = checkpoint.transform.position;
 		}
 
-		if (collider.gameObject.CompareTag ("NextLevel")) {
-			GlobalState gs = globalState.GetComponent<GlobalState>();
+		if (collider.gameObject.CompareTag ("NextLevel") && !isActivating && !isTimerOn) {
+            isActivating = true;
+            GlobalState gs = globalState.GetComponent<GlobalState>();
 			gs.currentScene++;
-			SceneManager.LoadScene (sceneIndex);
+			SceneManager.LoadScene (gs.currentScene);
 
 
 		}
@@ -316,7 +317,7 @@ public class PlayerController : MonoBehaviour {
 	public void retourMenu(){
 		Time.timeScale = 1;
 		pausePanel.gameObject.SetActive (false);
-		SceneManager.LoadScene (6);
+		SceneManager.LoadScene (0);
 	}
 
 

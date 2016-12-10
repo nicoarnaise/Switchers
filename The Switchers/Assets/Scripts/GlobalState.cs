@@ -32,7 +32,7 @@ public class GlobalState : MonoBehaviour {
 
 	void Update(){
 
-		if (SceneManager.GetActiveScene ().buildIndex == 6) {
+		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			findButtons ();
 		} 
 		
@@ -96,11 +96,11 @@ public class GlobalState : MonoBehaviour {
 
 	public void newGame(){
 		nbCadavre = 0;
-		currentScene = 0;
+		currentScene = 1;
 		for (int i=0; i<8; i++){
 			nbCavavreCurrent [i] = 0;
 		}
-		SceneManager.LoadScene (0);
+		SceneManager.LoadScene (1);
 	}
 
 	public void loadGame(){
