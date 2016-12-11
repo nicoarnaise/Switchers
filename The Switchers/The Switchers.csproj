@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\IntroCam.cs" />
     <Compile Include="Assets\Scripts\Actionneur.cs" />
     <Compile Include="Assets\Scripts\Cadavre.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -90,10 +91,12 @@
     <Compile Include="Assets\Scripts\GlobalState.cs" />
     <Compile Include="Assets\Scripts\GroundChecker.cs" />
     <Compile Include="Assets\Scripts\HumainRetourne.cs" />
+    <Compile Include="Assets\Scripts\Introplayer.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\Mur.cs" />
     <Compile Include="Assets\Scripts\Plateforme.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ameController.cs" />
     <Compile Include="Assets\Scripts\backgroundAdapter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

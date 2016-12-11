@@ -7,15 +7,17 @@ public class backgroundAdapter : MonoBehaviour {
     public bool KeepAspectRatio = true;
     /// <summary> Do you want it to continually check the screen size and update? </summary>
     public bool ExecuteOnUpdate = true;
+    public bool render = true;
 
     void Start()
     {
-        Resize(KeepAspectRatio);
+        if(render)
+            Resize(KeepAspectRatio);
     }
 
     void FixedUpdate()
     {
-        if (ExecuteOnUpdate)
+        if (ExecuteOnUpdate && render)
             Resize(KeepAspectRatio);
     }
 

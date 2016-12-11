@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour {
 		float cameraY;
 
 		if (pc.isBonus) {
-			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -20);
+			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -30);
 		} else {
 
 			if (positionY > topLimit) {
@@ -61,7 +61,7 @@ public class CameraController : MonoBehaviour {
 				}
 			}
 
-			transform.position = new Vector3 (cameraX, cameraY, -20);
+			transform.position = new Vector3 (cameraX, cameraY, -30);
 		}
 	}
 }

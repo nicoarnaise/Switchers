@@ -7,6 +7,7 @@ public class Cadavre : MonoBehaviour {
 
 	public int statut;
 	public bool isSpirit;
+    public bool notIntro = true;
 	Animator anim;
 
 	public bool isFree;
@@ -38,8 +39,11 @@ public class Cadavre : MonoBehaviour {
 		if (!isFree) {
 			isFree = true;
             anim.SetTrigger("liberation");
-			GlobalState gs = globalState.GetComponent<GlobalState>();
-			gs.nbCadavre++;
+            if (notIntro)
+            {
+                GlobalState gs = globalState.GetComponent<GlobalState>();
+			    gs.nbCadavre++;
+            }			
             anim.SetBool("isFree", true);
 
         }

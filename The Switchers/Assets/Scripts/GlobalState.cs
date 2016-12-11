@@ -40,15 +40,15 @@ public class GlobalState : MonoBehaviour {
 		
 
 	public void findButtons(){
-			b1 = GameObject.Find("Canvas/Panel/NP").GetComponent<Button>();
+			b1 = GameObject.Find("Canvas/Panel/Panel/NP").GetComponent<Button>();
 			b1.onClick.AddListener (() => {
 				newGame ();
 			});
-			b2 = GameObject.Find("Canvas/Panel/Continuer").GetComponent<Button>();
+			b2 = GameObject.Find("Canvas/Panel/Panel/Continuer").GetComponent<Button>();
 			b2.onClick.AddListener (() => {
 				loadGame ();
 			});
-			b3 = GameObject.Find("Canvas/Panel/Quitter").GetComponent<Button>();
+			b3 = GameObject.Find("Canvas/Panel/Panel/Quitter").GetComponent<Button>();
 			b3.onClick.AddListener (() => {
 				quit ();
 			});
