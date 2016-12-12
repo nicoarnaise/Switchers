@@ -21,7 +21,6 @@ public class GlobalState : MonoBehaviour {
 	public bool hasStarted;
 
 	void Awake() {
-		//DontDestroyOnLoad (transform.gameObject);
 		if (globalState == null) {
 			DontDestroyOnLoad (transform.gameObject);
 			globalState = this;
