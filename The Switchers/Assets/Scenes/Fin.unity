@@ -936,22 +936,22 @@ MonoBehaviour:
   Panel: {fileID: 417093363}
   pageNumber: 0
   pageContent:
-  - "F\xE9licitation pour avoir fini ton parcours ! Le monde entier te remercie pour
+  - "F\xE9licitations pour avoir fini ton parcours ! Le monde entier te remercie pour
     ton travail. Gr\xE2ce \xE0 toi les humains ont pu continuer \xE0 na\xEEtre !"
   - "Merci de m'avoir aid\xE9 ! Je vais te donner la possibilit\xE9 de te r\xE9incarner,
-    mais avant cel\xE0 je vais t'en dire plus sur mes cr\xE9ateurs."
+    mais avant cela je vais t'en dire plus sur mes cr\xE9ateurs."
   - "The Switchers est un jeu cr\xE9\xE9 par Nicolas Arnaise et Vincent Leclerc dans
     le cadre d'un projet de cr\xE9ation en 2016."
   - "Ils ont utilis\xE9 des sons libres de droits et la musique s'appelle Light Touch
     et a \xE9t\xE9 achet\xE9e sur Audio Network."
   - "Les graphismes ont \xE9t\xE9 r\xE9alis\xE9s par Nicolas Arnaise et agenc\xE9s
     par Vincent Leclerc."
-  - "Je penses que je t'ai assez retenu comme \xE7a, je te laisse te r\xE9incarner
-    et te souhaite une tr\xE8s bonne vie. Je garderai un oeil sur toi ;)"
+  - "Je pense que je t'ai assez retenu comme \xE7a, je te laisse te r\xE9incarner
+    et te souhaite une tr\xE8s bonne vie. Je garderai un oeil sur toi. ;)"
   fausseFin:
-  - "F\xE9licitation pour avoir fini ton parcours. H\xE9las, tu n'as pas sauv\xE9
-    toutes les \xE2mes prisoni\xE8res."
-  - "Je te renvoie au d\xE9but de ton aventure pour que tu puisses les sauver ;)"
+  - "F\xE9licitations pour avoir fini ton parcours. H\xE9las, tu n'as pas sauv\xE9
+    toutes les \xE2mes prisonni\xE8res."
+  - "Je te renvoie au d\xE9but de ton aventure pour que tu puisses les sauver. ;)"
   envol: 0
 --- !u!61 &815421906
 BoxCollider2D:

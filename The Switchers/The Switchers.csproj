@@ -81,28 +81,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Actionneur.cs" />
-    <Compile Include="Assets\Scripts\Cadavre.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Canvas.cs" />
-    <Compile Include="Assets\Scripts\Continuer.cs" />
-    <Compile Include="Assets\Scripts\Ennemi.cs" />
-    <Compile Include="Assets\Scripts\GlobalState.cs" />
-    <Compile Include="Assets\Scripts\GroundChecker.cs" />
-    <Compile Include="Assets\Scripts\HumainRetourne.cs" />
-    <Compile Include="Assets\Scripts\IntroCam.cs" />
-    <Compile Include="Assets\Scripts\Introplayer.cs" />
-    <Compile Include="Assets\Scripts\Level.cs" />
-    <Compile Include="Assets\Scripts\Mur.cs" />
-    <Compile Include="Assets\Scripts\Plateforme.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\ameController.cs" />
-    <Compile Include="Assets\Scripts\ameFinController.cs" />
-    <Compile Include="Assets\Scripts\backgroundAdapter.cs" />
-    <Compile Include="Assets\Scripts\finCam.cs" />
-    <Compile Include="Assets\Scripts\finPlayer.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\IntroCam.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\Introplayer.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\ameController.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\ameFinController.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\finCam.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\finPlayer.cs" />
+    <Compile Include="Assets\Scripts\Animations Debut Fin\textMaker.cs" />
+    <Compile Include="Assets\Scripts\Cameras et background\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Cameras et background\backgroundAdapter.cs" />
+    <Compile Include="Assets\Scripts\Game State\Continuer.cs" />
+    <Compile Include="Assets\Scripts\Game State\GlobalState.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Actionneur.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Cadavre.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Ennemi.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\GroundChecker.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Level.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Mur.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\Plateforme.cs" />
+    <Compile Include="Assets\Scripts\Objets Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\passeurControl.cs" />
-    <Compile Include="Assets\Scripts\textMaker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
