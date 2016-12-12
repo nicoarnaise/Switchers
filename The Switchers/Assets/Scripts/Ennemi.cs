@@ -17,7 +17,6 @@ public class Ennemi : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
-		anim.SetBool ("isSpirit", isSpirit);
 	}
 	
 	// Update is called once per frame

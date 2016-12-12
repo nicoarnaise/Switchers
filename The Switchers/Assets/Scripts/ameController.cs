@@ -54,10 +54,13 @@ public class ameController : MonoBehaviour
         if(pageNumber == 1)
             Panel.SetActive(true);
         if (pageNumber == pageContent.Length + 1)
+        {
             Panel.SetActive(false);
+            Invoke("debuter", 0.5f);
+        }
         if(pageNumber >= 1 && Panel.activeInHierarchy)
             textBox.text = pageContent[pageNumber-1];
-        
+
         if (envol)
         {
             rb.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;

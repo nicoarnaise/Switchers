@@ -86,6 +86,9 @@ public class Plateforme : MonoBehaviour {
 		if (collider.gameObject.CompareTag ("Player") && collider.transform.parent.parent.gameObject == gameObject) {
 			collider.transform.parent.parent = null;
             gameObject.layer = 10;
+        } else if (collider.gameObject.CompareTag("Player"))
+        {
+            collider.transform.parent = null;
         }
 	}
 

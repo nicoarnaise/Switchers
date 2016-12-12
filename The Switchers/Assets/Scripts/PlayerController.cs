@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject globalState;
 	public int sceneIndex;
 
+    public AudioClip mort;
+
 	public bool isSpirit;
 	public bool isBonus;
 
@@ -256,7 +258,8 @@ public class PlayerController : MonoBehaviour {
 
 		if (collider.gameObject.CompareTag ("Ennemi")) {
 			transform.position = checkpoint.transform.position;
-		}
+            ((AudioSource)GetComponent<AudioSource>()).PlayOneShot(mort, 1);
+        }
 
 		if (collider.gameObject.CompareTag ("NextLevel") && !isActivating && !isTimerOn) {
             isActivating = true;

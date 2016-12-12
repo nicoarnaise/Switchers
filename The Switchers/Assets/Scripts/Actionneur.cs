@@ -65,8 +65,6 @@ public class Actionneur : MonoBehaviour {
 	}
 
 
-
-
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.gameObject.CompareTag("Player")
 			&& gameObject.CompareTag ("Plaque")) {
@@ -79,66 +77,27 @@ public class Actionneur : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D collider){
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player")
+            && gameObject.CompareTag("Plaque"))
+        {
+            hasPlayer = true;
+        }
+
+        if (collider.gameObject.CompareTag("Cadavre")
+            && gameObject.CompareTag("Plaque"))
+        {
+            hasCadavre = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider){
 		if (collider.gameObject.CompareTag("Player")
 			&& gameObject.CompareTag ("Plaque")) {
 			hasPlayer = false;
 		}
 
 	}
-	/*
-	// Plaque Enter
-	void OnTriggerEnter2D(Collider2D collider){
-		
-		if (collider.gameObject.CompareTag ("Player") && gameObject.CompareTag ("Plaque")) {
-			isActive = true;
-			anim.SetBool ("Activated", isActive);
-		}
-	}
-
-	// Plaque Exit
-	void OnTriggerExit2D(Collider2D collider){
-
-		if (gameObject.CompareTag ("Plaque")) {
-			// Player
-			if (collider.gameObject.CompareTag ("Player")) {
-				isActive = false;
-			} else {
-				// Cadavre
-				if (collider.gameObject.CompareTag ("Cadavre")) {
-					Cadavre cadavre = collider.gameObject.GetComponent<Cadavre> ();
-					if (cadavre.isFree) {
-						isActive = false;
-					} 
-				} 
-			}
-			anim.SetBool ("Activated", isActive);
-		}
-
-	}
-
-	// Plaque 
-	/*void OnTriggerStay2D(Collider2D collider){
-
-		if (gameObject.CompareTag ("Plaque")) {
-			// Player
-			if (collider.gameObject.CompareTag ("Player")) {
-				isActive = true;
-			} else {
-				// Cadavre
-				if (collider.gameObject.CompareTag ("Cadavre")) {
-					Cadavre cadavre = collider.gameObject.GetComponent<Cadavre> ();
-					if (!cadavre.isFree) {
-						isActive = true;
-					} else {  
-						isActive = false;
-					} 
-				} else {
-					isActive = false;
-				}
-			}
-			anim.SetBool ("Activated", isActive);
-		}
-	}*/
 
 }

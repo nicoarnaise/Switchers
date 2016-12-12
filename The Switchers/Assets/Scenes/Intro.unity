@@ -691,9 +691,99 @@ Prefab:
       propertyPath: notIntro
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012552526952, guid: ab916e70b004d447080fb7eaf488ff51,
+        type: 2}
+      propertyPath: merci
+      value: 
+      objectReference: {fileID: 8300000, guid: 792e0156f3f245f4a9e90bf6099d1093, type: 3}
+    - target: {fileID: 114000012552526952, guid: ab916e70b004d447080fb7eaf488ff51,
+        type: 2}
+      propertyPath: appel
+      value: 
+      objectReference: {fileID: 8300000, guid: 97bcc8c9060379f459346245e5ef99e6, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab916e70b004d447080fb7eaf488ff51, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &564106368 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013841749420, guid: ab916e70b004d447080fb7eaf488ff51,
+    type: 2}
+  m_PrefabInternal: {fileID: 564106367}
+--- !u!82 &564106369
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564106368}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000012669693136, guid: 43347ccf0401f064b982d93471b8d9cd,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &678221129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,20 +1398,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   aBouge: 0
+  globalState: {fileID: 0}
   textBox: {fileID: 0}
   Panel: {fileID: 1088992905}
   pageNumber: 0
   pageContent:
   - "Bon retour parmis nous petite \xE2me ! Je suis Bob, le dieu de ce monde et tu
     viens d'\xEAtre secourue par un Switcher."
-  - "Les Switcher sont des \xE2mes comme toi qui lib\xE8rent les \xE2mes des cadavres
-    humains. Normalement lorsqu'une \xE2me est lib\xE9r\xE9e, elle entre directement
-    dans le corps d'un enfant et oublie tout de son pass\xE9."
-  - "Cependant le nombre de cadavre a anormalement augment\xE9 ces derniers temps
-    donc j'ai besoin de nouveaux Switchers. Je penses que tu feras parfaitement l'affaire."
-  - "Ne t'inqui\xE8te pas, je vais te guider pendant ta t\xE2che pour que tu puisses
-    accomplir au mieux et au plus vite ta t\xE2che et te r\xE9incarner en humain rapidement
-    ;)"
+  - "Les Switcher sont des \xE2mes comme toi. Ils lib\xE8rent les autres \xE2mes des
+    cadavres humains. D\xE8s qu'une \xE2me est lib\xE9r\xE9e, elle entre dans le corps
+    d'un enfant et oublie tout."
+  - "Cependant le nombre de cadavre a beaucoup augment\xE9 ces derniers temps. J'ai
+    besoin de nouveaux Switchers. Je penses que tu feras parfaitement l'affaire."
+  - "Ne t'inqui\xE8te pas, je vais te guider pour que tu puisses accomplir au mieux
+    ta t\xE2che et te r\xE9incarner en humain rapidement ;)"
   envol: 0
 --- !u!61 &1493492853
 BoxCollider2D:
