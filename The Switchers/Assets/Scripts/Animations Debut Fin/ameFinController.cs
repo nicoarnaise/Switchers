@@ -47,7 +47,7 @@ public class ameFinController : MonoBehaviour
     void debuter()
     {
         GlobalState gs = globalState.GetComponent<GlobalState>();
-        gs.currentScene = 2;
+        gs.currentScene = 3;
         gs.nbCadavre = 0;
         SceneManager.LoadScene(gs.currentScene);
     }

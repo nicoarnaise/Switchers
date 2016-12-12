@@ -9,7 +9,12 @@ public class Ennemi : MonoBehaviour {
 	public int moveSpeed;
 	Animator anim;
 
-	bool facingRight = false;
+    //timer
+    public bool isTimerOn;
+    public float period = 0.2f;
+    public float timer;
+
+    bool facingRight = false;
 
 
 	private Rigidbody2D rb;
@@ -26,8 +31,14 @@ public class Ennemi : MonoBehaviour {
 			makeMove ();
 		}
 
-	
-	}
+        // Allows to have a period elapsed function
+        if (isTimerOn && Time.time > timer + period)
+        {
+            isTimerOn = false;
+        }
+
+
+    }
 
 
 	public void makeMove(){
@@ -55,9 +66,24 @@ public class Ennemi : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collider){
 
-		if (collider.gameObject.CompareTag ("Bords")) {
-			Flip ();
-		}
-			
-	}
+        if (!isTimerOn && collider.gameObject.CompareTag("Bords"))
+        {
+            timer = Time.time;
+            isTimerOn = true;
+            Flip();
+        }
+
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        
+        if (!isTimerOn && collider.gameObject.CompareTag("Bords"))
+        {
+            timer = Time.time;
+            isTimerOn = true;
+            Flip();
+        }
+
+    }
 }
