@@ -1652,6 +1652,9 @@ MonoBehaviour:
   isSpirit: 0
   isMoving: 1
   moveSpeed: 2
+  isTimerOn: 0
+  period: 0.2
+  timer: 0
 --- !u!1 &450558474
 GameObject:
   m_ObjectHideFlags: 0
@@ -7958,7 +7961,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010902988280, guid: 5ef15ed8d6ba8e3469847002f7ed7fc0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -6.55
       objectReference: {fileID: 0}
     - target: {fileID: 4000010902988280, guid: 5ef15ed8d6ba8e3469847002f7ed7fc0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8026,6 +8029,9 @@ MonoBehaviour:
   isSpirit: 0
   isMoving: 1
   moveSpeed: 2
+  isTimerOn: 0
+  period: 0.2
+  timer: 0
 --- !u!1 &1565092918
 GameObject:
   m_ObjectHideFlags: 0

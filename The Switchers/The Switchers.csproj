@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\backgroundAdapter.cs" />
     <Compile Include="Assets\Scripts\finCam.cs" />
     <Compile Include="Assets\Scripts\finPlayer.cs" />
+    <Compile Include="Assets\Scripts\passeurControl.cs" />
     <Compile Include="Assets\Scripts\textMaker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
