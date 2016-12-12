@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
 
-
+		setText ();
 		// Menu Pause
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (Time.timeScale != 0) {

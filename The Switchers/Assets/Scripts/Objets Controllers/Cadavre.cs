@@ -53,6 +53,7 @@ public class Cadavre : MonoBehaviour
             {
                 GlobalState gs = globalState.GetComponent<GlobalState>();
                 gs.nbCadavre++;
+				gs.nbCavavreCurrent [gs.currentScene];
             }
             anim.SetBool("isFree", true);
 
