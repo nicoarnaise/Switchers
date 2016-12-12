@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour {
 
+	public Text ame;
+	public Text textMort;
+
 	public Image pausePanel;
 	public Level level;
 	public GameObject globalState;
@@ -107,10 +110,19 @@ public class PlayerController : MonoBehaviour {
             back.changeUnivers(isSpirit);
         }
     }
+
+	public void setText(){
+		GlobalState gs = globalState.GetComponent<GlobalState>();
+		ame.text = "Âmes libérées : " + gs.nbCavavreCurrent [gs.currentScene] + "/" +
+		gs.nbCadavreTotal [gs.currentScene];
+		textMort.text = "Morts : " + gs.nbMort;
+	}
 		
 	
 	// Update is called once per frame
 	void Update () {
+
+
 
 		// Menu Pause
 		if (Input.GetKeyDown (KeyCode.Escape)) {
@@ -130,8 +142,7 @@ public class PlayerController : MonoBehaviour {
 			isActivating = false;
 			isTimerOn = true;
 		}
-
-		// Allows to have a period elapsed function
+			
 		if (isTimerOn && Time.time > timer + period) {
 			isTimerOn = false;
 		}
@@ -257,6 +268,8 @@ public class PlayerController : MonoBehaviour {
 
 
 		if (collider.gameObject.CompareTag ("Ennemi")) {
+			GlobalState gs = globalState.GetComponent<GlobalState>();
+			gs.nbMort++;
 			transform.position = checkpoint.transform.position;
             ((AudioSource)GetComponent<AudioSource>()).PlayOneShot(mort, 1);
         }
