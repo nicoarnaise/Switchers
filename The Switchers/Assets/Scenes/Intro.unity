@@ -1403,15 +1403,15 @@ MonoBehaviour:
   Panel: {fileID: 1088992905}
   pageNumber: 0
   pageContent:
-  - "Bon retour parmis nous petite \xE2me ! Je suis Bob, le dieu de ce monde et tu
+  - "Bon retour parmi nous petite \xE2me ! Je suis Bob, le dieu de ce monde et tu
     viens d'\xEAtre secourue par un Switcher."
-  - "Les Switcher sont des \xE2mes comme toi. Ils lib\xE8rent les autres \xE2mes des
-    cadavres humains. D\xE8s qu'une \xE2me est lib\xE9r\xE9e, elle entre dans le corps
-    d'un enfant et oublie tout."
-  - "Cependant le nombre de cadavre a beaucoup augment\xE9 ces derniers temps. J'ai
-    besoin de nouveaux Switchers. Je penses que tu feras parfaitement l'affaire."
+  - "Les Switchers sont des \xE2mes comme toi. Ils lib\xE8rent les autres \xE2mes
+    des cadavres humains. D\xE8s qu'une \xE2me est lib\xE9r\xE9e, elle entre dans
+    le corps d'un enfant et oublie tout."
+  - "Cependant le nombre de cadavres a beaucoup augment\xE9 ces derniers temps. J'ai
+    besoin de nouveaux Switchers. Je pense que tu feras parfaitement l'affaire."
   - "Ne t'inqui\xE8te pas, je vais te guider pour que tu puisses accomplir au mieux
-    ta t\xE2che et te r\xE9incarner en humain rapidement ;)"
+    ta t\xE2che et te r\xE9incarner en humain rapidement. ;)"
   envol: 0
 --- !u!61 &1493492853
 BoxCollider2D:

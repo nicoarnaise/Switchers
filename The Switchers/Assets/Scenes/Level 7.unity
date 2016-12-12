@@ -2805,7 +2805,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556109638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.67, z: 0}
+  m_LocalPosition: {x: 0.03, y: 3.67, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2830,7 +2830,7 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0894375
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3495,11 +3495,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.47
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3566,7 +3566,7 @@ Prefab:
     - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.020401001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalScale.x
@@ -3768,9 +3768,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1}
+  m_Size: {x: 6.3, y: 1.5}
 --- !u!95 &748451622
 Animator:
   serializedVersion: 3
@@ -4229,9 +4229,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &884838360
 MonoBehaviour:
@@ -4270,9 +4270,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Size: {x: 6.173117, y: 1}
+  m_Size: {x: 6.173117, y: 1.5}
 --- !u!95 &884838362
 Animator:
   serializedVersion: 3
@@ -4425,7 +4425,7 @@ MonoBehaviour:
   isSpirit: 0
   isBonus: 0
   isPhysic: 0
-  isGrounded: 1
+  isGrounded: 0
   moveSpeed: 10
   flyInertia: 0.9
   jumpSpeed: 20
@@ -4528,9 +4528,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!82 &906481154
 AudioSource:
@@ -4965,11 +4965,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5036,7 +5036,7 @@ Prefab:
     - target: {fileID: 61000010654533426, guid: 166b46171c26f814bb04867ba32c342e,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.020401001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013285196490, guid: 166b46171c26f814bb04867ba32c342e, type: 2}
       propertyPath: m_LocalScale.x
@@ -6852,7 +6852,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1533764884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.58, z: 0}
+  m_LocalPosition: {x: -0.02, y: 3.28, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []

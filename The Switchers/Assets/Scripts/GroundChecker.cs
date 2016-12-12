@@ -38,7 +38,7 @@ public class GroundChecker : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit2D(Collider2D collider){
+    void OnTriggerExit2D(Collider2D collider){
 		if (collider.gameObject.CompareTag("Plateforme")) {
 			triggers.Remove (collider);
 		}

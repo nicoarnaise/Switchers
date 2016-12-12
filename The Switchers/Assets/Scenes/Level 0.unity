@@ -2528,10 +2528,10 @@ MonoBehaviour:
   pageNumber: 0
   pageContent:
   - "Pour te d\xE9placer \xE0 gauche ou \xE0 droite, utilise les fl\xE8ches directionnelles
-    gauche et droite."
-  - Pour sauter, appuie sur la barre espace
-  - "Pour actionner le levier, mets toi devant et appuie sur la fl\xE8che directionnelle
-    bas."
+    GAUCHE et DROITE."
+  - Pour sauter, appuie sur la barre ESPACE
+  - "Pour actionner le levier, mets-toi devant et appuie sur la fl\xE8che directionnelle
+    BAS."
 --- !u!1 &1826527921
 GameObject:
   m_ObjectHideFlags: 0

@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if (isGrounded && Input.GetButtonDown("Jump")) {
+		if ((rb.velocity.y == 0 || isGrounded) && Input.GetButtonDown("Jump")) {
             rb.isKinematic = false;	
 			animator.SetBool ("isGround", false);
             rb.AddForce(new Vector2(0f,jumpSpeed), ForceMode2D.Impulse);
@@ -206,7 +206,7 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate(){
 
-		// Jump
+        // Jump
 
 		isGrounded = groundChecker.isTriggered;
 		animator.SetBool("isGround", isGrounded);

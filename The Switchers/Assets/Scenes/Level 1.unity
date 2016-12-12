@@ -513,9 +513,9 @@ MonoBehaviour:
   pageNumber: 0
   pageContent:
   - "La tombe qui se trouve \xE0 tes pieds repr\xE9sente un cadavre."
-  - "Pour lib\xE9rer l'\xE2me, il faut que passe en mode spirituel en appuyant sur
-    la fl\xE8che directionnelle haut."
-  - Place toi ensuite devant le cadavre et appuis sur bas.
+  - "Pour lib\xE9rer l'\xE2me, il faut que tu passes en mode spirituel en appuyant
+    sur la fl\xE8che directionnelle HAUT."
+  - Place-toi ensuite devant le cadavre et appuie sur BAS.
 --- !u!114 &364231038
 MonoBehaviour:
   m_ObjectHideFlags: 0
