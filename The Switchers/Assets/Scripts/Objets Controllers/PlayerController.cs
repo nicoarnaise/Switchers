@@ -113,8 +113,8 @@ public class PlayerController : MonoBehaviour {
 
 	public void setText(){
 		GlobalState gs = globalState.GetComponent<GlobalState>();
-		ame.text = "Âmes libérées : " + gs.nbCavavreCurrent [gs.currentScene] + "/" +
-		gs.nbCadavreTotal [gs.currentScene];
+		ame.text = "Âmes libérées : " + gs.nbCavavreCurrent [gs.currentScene-3] + "/" +
+		gs.nbCadavreTotal [gs.currentScene-3];
 		textMort.text = "Morts : " + gs.nbMort;
 	}
 		

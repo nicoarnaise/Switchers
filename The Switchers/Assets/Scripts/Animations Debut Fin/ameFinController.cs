@@ -49,6 +49,10 @@ public class ameFinController : MonoBehaviour
         GlobalState gs = globalState.GetComponent<GlobalState>();
         gs.currentScene = 3;
         gs.nbCadavre = 0;
+		int i;
+		for (i=0; i<8; i++){
+			gs.nbCavavreCurrent[i] = 0;
+		}
         SceneManager.LoadScene(gs.currentScene);
     }
 
