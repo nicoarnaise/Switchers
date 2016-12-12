@@ -3649,11 +3649,7 @@ MonoBehaviour:
   isSpirit: 0
   isMobile: 0
   statut: 0
-<<<<<<< HEAD
-  isMovingAlone: 1
-=======
   isMovingAlone: 0
->>>>>>> origin/master
   anim: {fileID: 0}
   tabDestination:
   - {x: 83, y: -9.5}
