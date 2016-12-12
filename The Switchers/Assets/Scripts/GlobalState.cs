@@ -100,7 +100,7 @@ public class GlobalState : MonoBehaviour {
 		for (int i=0; i<8; i++){
 			nbCavavreCurrent [i] = 0;
 		}
-		SceneManager.LoadScene (1);
+		SceneManager.LoadSceneAsync(1);
 	}
 
 	public void loadGame(){

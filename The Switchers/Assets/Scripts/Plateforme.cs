@@ -11,7 +11,7 @@ public class Plateforme : MonoBehaviour {
 	public bool isMobile;
 	public int statut;
 	public bool isMovingAlone;
-	Animator anim;
+	public Animator anim;
 	public Vector2[] tabDestination;
 	public bool isMoving;
 	public bool isActivable;
