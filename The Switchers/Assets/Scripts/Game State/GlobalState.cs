@@ -13,6 +13,7 @@ public class GlobalState : MonoBehaviour {
 	public Button b2;
 	public Button b3;
 
+	public int nbMort;
 	public int nbCadavre;
 	public int nbCadavreTot;
 	public int[] nbCavavreCurrent;
@@ -66,6 +67,7 @@ public class GlobalState : MonoBehaviour {
 
 		hasStarted = true;
 		GameData data = new GameData (); 
+		data.nbMort = nbMort;
 		data.nbCadavre = nbCadavre;
 		data.nbCadavreTot = nbCadavreTot;
 		data.currentScene = currentScene;
@@ -85,6 +87,7 @@ public class GlobalState : MonoBehaviour {
 			GameData data = (GameData)bf.Deserialize (file);
 			file.Close ();
 
+			nbMort = data.nbMort;
 			nbCadavre = data.nbCadavre;
 			nbCadavreTot = data.nbCadavreTot;
 			currentScene = data.currentScene;
@@ -94,6 +97,7 @@ public class GlobalState : MonoBehaviour {
 	}
 
 	public void newGame(){
+		nbMort = 0;
 		nbCadavre = 0;
 		currentScene = 1;
 		for (int i=0; i<8; i++){
@@ -118,6 +122,7 @@ public class GlobalState : MonoBehaviour {
 
 [Serializable]
 class GameData{
+	public int nbMort;
 	public int nbCadavre;
 	public int nbCadavreTot;
 	public int[] nbCavavreCurrent;
