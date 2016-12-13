@@ -267,7 +267,8 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 
 
-		if (collider.gameObject.CompareTag ("Ennemi")) {
+		if (collider.gameObject.CompareTag ("Ennemi") && !isActivating && !isTimerOn) {
+			isActivating = true;
 			GlobalState gs = globalState.GetComponent<GlobalState>();
 			gs.nbMort++;
 			transform.position = checkpoint.transform.position;
