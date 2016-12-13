@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
+	// Variables initialisant la position de la camera
 	public GameObject player;
 	public float startLevelPosition;
 	public float finishLevelPosition;
@@ -11,13 +12,12 @@ public class CameraController : MonoBehaviour {
 
 	private float topLimit;
 	private float botLimit;
-	// Use this for initialization
 
 	private float offset;
 	private float verticalTopOffset;
 	private float verticalBotOffset;
 
-	// Use this for initialization
+	// Initialisation position
 	void Start () {
         offset = 0;
 		topLimit = verticalInit + 6;
@@ -26,8 +26,10 @@ public class CameraController : MonoBehaviour {
 		verticalBotOffset = verticalInit - botLimit;
 	}
 
-	// Update is called once per frame
+
 	void LateUpdate () {
+
+		// On se cale sur la position du joueur
 
 		PlayerController pc = player.GetComponent<PlayerController> ();
 
@@ -37,6 +39,12 @@ public class CameraController : MonoBehaviour {
 		float cameraX;
 		float cameraY;
 
+		// Si on est dans le niveau bonus, on se cale sur la position du joueur
+		// Sinon, on gere la position verticale puis horizontale :
+		// Pour la position verticale, on a une limite haute et basse. Au dela de ces
+		// limites, la camera suit plus ou moins le joueur avec un offset, sinon elle a une position fixe.
+		// Pour la position horizontale, on a une limite gauche et droite. A l'interieur de
+		// ces limites, la camera suit plus ou moins le joueur avec un offset, sinon elle a une position fixe.
 		if (pc.isBonus) {
 			transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -30);
 		} else {

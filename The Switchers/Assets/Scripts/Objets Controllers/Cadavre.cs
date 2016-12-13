@@ -6,32 +6,48 @@ public class Cadavre : MonoBehaviour
 
     public GameObject globalState;
 
+	// variables de sons du Cadavre
     public AudioClip appel;
     public AudioClip merci;
-    public int statut;
+
+	// statut =
+	// 0 : Mixte
+	// 1 : Physique
+	// 2 : Spirituel
+	public int statut;
+
+	// isSpirit, correspondant au mode de vue du joueur
+	//sert pour l'animation du mode physique ou spirituel
     public bool isSpirit;
+	// notIntro permet de savoir si il n'est pas dans la scene d'intro
     public bool notIntro = true;
+
+	// Animator
     Animator anim;
 
+	// Variable permettant de savoir si il est libere
     public bool isFree;
 
+	// RigidBody
     private Rigidbody2D rb;
 
-
+	// On recupere l'objet GlobalState
     void Awake()
     {
         globalState = GameObject.Find("GlobalState");
     }
-    // Use this for initialization
+    
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
+		// Si le cadavre est libere, il n'est plus actif.
         anim.SetBool("isSpirit", isSpirit);
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("free"))
         {
@@ -43,7 +59,7 @@ public class Cadavre : MonoBehaviour
 
     public void activate()
     {
-
+		// Animation/Son de la liberation de l'ame et modification des variables de globalState
         if (!isFree)
         {
             isFree = true;
@@ -60,6 +76,7 @@ public class Cadavre : MonoBehaviour
         }
     }
 
+	// Son du contact entre le joueur et le cadavre
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))

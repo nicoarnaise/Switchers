@@ -8,11 +8,17 @@ using System.IO;
 
 public class GlobalState : MonoBehaviour {
 
+	// On a besoin d'une variable globalState pour qu'une seule instance de la classe soit creee,
+	// lors du Awake()
 	public static GlobalState globalState;
+
+	// Les 3 boutons du menu principal, c'est le globalState qui gere les fonctions onClick ()
+	// de ces derniers. 
 	public Button b1;
 	public Button b2;
 	public Button b3;
 
+	// Variables globales du jeu tels que le nombre de morts, de cadavres liberes, de la scene courante.
 	public int nbMort;
 	public int nbCadavre;
 	public int nbCadavreTot;
@@ -22,6 +28,8 @@ public class GlobalState : MonoBehaviour {
 	public bool hasStarted;
 
 	void Awake() {
+		// Utilisation du design Pattern Singleton, si c'est la première fois que ce script est appele, il est cree, 
+		// sinon, il est detruit car il y en a deja un
 		if (globalState == null) {
 			DontDestroyOnLoad (transform.gameObject);
 			globalState = this;
@@ -29,9 +37,10 @@ public class GlobalState : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+		
 
 	void Update(){
-
+		// On cherche les boutons et on leur attribut les fonctions onClick() uniquement dans le menu principal
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			findButtons ();
 		} 
@@ -40,6 +49,8 @@ public class GlobalState : MonoBehaviour {
 		
 
 	public void findButtons(){
+
+		// Recherche des boutons dans la scène, et attribution des fonctions onClick()
 			b1 = GameObject.Find("Canvas/Panel/Panel/NP").GetComponent<Button>();
 			b1.onClick.AddListener (() => {
 				newGame ();
@@ -61,6 +72,8 @@ public class GlobalState : MonoBehaviour {
 		
 	}
 
+
+	// Methode permettant de sauvegarder les donnees de ce script
 	public void Save(){
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (Application.persistentDataPath + "/gameInfo.dat");
@@ -77,9 +90,9 @@ public class GlobalState : MonoBehaviour {
 
 		bf.Serialize (file, data);
 		file.Close ();
-
 	}
 
+	// eéthode permettant de charger les donnees d'un fichier dans le globalState
 	public void Load(){
 		if (File.Exists (Application.persistentDataPath + "gameInfo.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
@@ -96,6 +109,7 @@ public class GlobalState : MonoBehaviour {
 		}
 	}
 
+	//Methode permettant de lancer une nouvelle partie
 	public void newGame(){
 		nbMort = 0;
 		nbCadavre = 0;
@@ -106,11 +120,13 @@ public class GlobalState : MonoBehaviour {
 		SceneManager.LoadSceneAsync(1);
 	}
 
+	// Suite de Load ...
 	public void loadGame(){
 		Load ();
 		SceneManager.LoadScene (currentScene);
 	}
 
+	// Quitter le programme
 	public void quit(){
 		#if UNITY_EDITOR
 		UnityEditor.EditorApplication.isPlaying = false;
@@ -120,6 +136,7 @@ public class GlobalState : MonoBehaviour {
 	}
 }
 
+// Creation d'une classe serialisable pour sauvegarder les donnees
 [Serializable]
 class GameData{
 	public int nbMort;
