@@ -3,10 +3,21 @@ using System.Collections;
 
 public class Ennemi : MonoBehaviour {
 
+	//// statut =
+	// 0 : Mixte
+	// 1 : Physique
+	// 2 : Spirituel
 	public int statut;
+
+	// isSpirit, correspondant au mode de vue du joueur
+	//sert pour l'animation du mode physique ou spirituel
 	public bool isSpirit;
+
+	//Variables de mouvement
 	public bool isMoving;
 	public int moveSpeed;
+
+	// Animator
 	Animator anim;
 
     //timer
@@ -14,24 +25,26 @@ public class Ennemi : MonoBehaviour {
     public float period = 0.2f;
     public float timer;
 
+	// Direction de l'ennemi
     bool facingRight = false;
 
-
+	// RigidBody
 	private Rigidbody2D rb;
-	// Use this for initialization
+
 	void Start () {
 		anim = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
 
+	void Update () {
+		// L'ennemi bouge
 		if (isMoving) {
 			makeMove ();
 		}
 
-        // Allows to have a period elapsed function
+        // laisse un temps pour permettre à l'ennemi de sortir de collision avec les box
+		// de collisions
         if (isTimerOn && Time.time > timer + period)
         {
             isTimerOn = false;
@@ -40,7 +53,7 @@ public class Ennemi : MonoBehaviour {
 
     }
 
-
+	// Defini une vitesse à l'ennemi selon sa direction
 	public void makeMove(){
 
 
@@ -57,6 +70,7 @@ public class Ennemi : MonoBehaviour {
 
 	}
 
+	// Change la direction de l'ennemi
 	void Flip(){
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
@@ -64,6 +78,9 @@ public class Ennemi : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	// Detecte si l'ennemi entre en collision avec des "Bords", en general places
+	// d'un bout à l'autre de la plateforme pour permettre à l'ennemi de faire
+	// des allez retours.
 	void OnTriggerEnter2D(Collider2D collider){
 
         if (!isTimerOn && collider.gameObject.CompareTag("Bords"))
@@ -75,6 +92,9 @@ public class Ennemi : MonoBehaviour {
 
     }
 
+	// Detecte si l'ennemi entre en collision avec des "Bords", en general places
+	// d'un bout à l'autre de la plateforme pour permettre à l'ennemi de faire
+	// des allez retours.
     void OnTriggerStay2D(Collider2D collider)
     {
         

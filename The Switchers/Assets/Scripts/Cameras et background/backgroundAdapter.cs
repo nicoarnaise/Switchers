@@ -3,9 +3,9 @@ using System.Collections;
 
 public class backgroundAdapter : MonoBehaviour {
 
-    /// <summary> Do you want the sprite to maintain the aspect ratio? </summary>
+    // garder le ratio d'origine de l'image
     public bool KeepAspectRatio = true;
-    /// <summary> Do you want it to continually check the screen size and update? </summary>
+    // adapter la taille de l'image a chaque Update
     public bool ExecuteOnUpdate = true;
     public bool render = true;
 
@@ -21,38 +21,32 @@ public class backgroundAdapter : MonoBehaviour {
             Resize(KeepAspectRatio);
     }
 
-    /// <summary>
-    /// Resize the attached sprite according to the camera view
-    /// </summary>
-    /// <param name="keepAspect">bool : if true, the image aspect ratio will be retained</param>
+    // Permet d'adapter l'image a la taille de la camera.
     void Resize(bool keepAspect = false)
     {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         transform.localScale = new Vector3(1, 1, 1);
 
-        // example of a 640x480 sprite
-        float width = sr.sprite.bounds.size.x; // 4.80f
-        float height = sr.sprite.bounds.size.y; // 6.40f
+        float width = sr.sprite.bounds.size.x;
+        float height = sr.sprite.bounds.size.y;
 
-        // and a 2D camera at 0,0,-10
-        float worldScreenHeight = Camera.main.orthographicSize * 2f; // 10f
-        float worldScreenWidth = worldScreenHeight / Screen.height * Screen.width; // 10f
+        float worldScreenHeight = Camera.main.orthographicSize * 2f;
+        float worldScreenWidth = worldScreenHeight / Screen.height * Screen.width;
 
         Vector3 imgScale = new Vector3(1f, 1f, 1f);
 
-        // do we scale according to the image, or do we stretch it?
         if (keepAspect)
         {
             Vector2 ratio = new Vector2(width / height, height / width);
             if ((worldScreenWidth / width) > (worldScreenHeight / height))
             {
-                // wider than tall
+                // plus large que haut
                 imgScale.x = worldScreenWidth / width;
                 imgScale.y = imgScale.x * ratio.y;
             }
             else
             {
-                // taller than wide
+                // plus haut que large
                 imgScale.y = worldScreenHeight / height;
                 imgScale.x = imgScale.y * ratio.x;
             }
@@ -63,10 +57,11 @@ public class backgroundAdapter : MonoBehaviour {
             imgScale.y = worldScreenHeight / height;
         }
 
-        // apply change
+        // appliquer les changements de taille
         transform.localScale = imgScale;
     }
 
+    // permet d'activer ou non le background en fonction du mode de vue du joueur.
     public void changeUnivers(bool isSpirit)
     {
         gameObject.SetActive(transform.CompareTag("SpiritBackground") == isSpirit);

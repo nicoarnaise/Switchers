@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Animations Debut Fin\ameFinController.cs" />
      <Compile Include="Assets\Scripts\Animations Debut Fin\finCam.cs" />
      <Compile Include="Assets\Scripts\Animations Debut Fin\finPlayer.cs" />
+     <Compile Include="Assets\Scripts\Animations Debut Fin\passeurControl.cs" />
      <Compile Include="Assets\Scripts\Animations Debut Fin\textMaker.cs" />
      <Compile Include="Assets\Scripts\Cameras et background\CameraController.cs" />
      <Compile Include="Assets\Scripts\Cameras et background\backgroundAdapter.cs" />
@@ -64,7 +65,6 @@
      <Compile Include="Assets\Scripts\Objets Controllers\Mur.cs" />
      <Compile Include="Assets\Scripts\Objets Controllers\Plateforme.cs" />
      <Compile Include="Assets\Scripts\Objets Controllers\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\passeurControl.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
